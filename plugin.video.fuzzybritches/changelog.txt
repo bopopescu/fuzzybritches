@@ -1,0 +1,55 @@
+[B][COLOR deepskyblue]• [/COLOR][/B][B][COLOR yellow] FUZZY BRITCHES LATEST UPDATES [/COLOR][/B][B][COLOR deepskyblue] •[/COLOR][/B]
+
+[B][COLOR lime]• [/COLOR][/B][COLOR deepskyblue]CURRENT STATUS:[/COLOR] All is working great except for:
+[B][COLOR red]• Documentary section is down[/COLOR][/B]
+
+ 
+[COLOR deepskyblue]********************************************************************************************[/COLOR]
+[B][COLOR limegreen]v2.0.10[/COLOR][/B][B][I][COLOR red]• You will need to re-authorize Trakt after this update[/COLOR][/I][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Fixed library so it will auto update
+[B][COLOR deepskyblue]• [/COLOR][/B] Scraper Fixes
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
+
+[B][COLOR limegreen]v2.0.9[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Disabled Documentaries section until fixed
+
+[B][COLOR limegreen]v2.0.8[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
+
+[B][COLOR limegreen]v2.0.7[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
+
+[B][COLOR limegreen]v2.0.6[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
+
+[B][COLOR limegreen]v2.0.5[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Module Update
+[B][COLOR deepskyblue]• [/COLOR][/B] Scrapers Update
+
+[B][COLOR limegreen]v2.0.4[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Module Update
+
+[B][COLOR limegreen]v2.0.3[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Scrapers Update
+
+[B][COLOR limegreen]v2.0.2[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Added Debrid only
+[B][COLOR deepskyblue]• [/COLOR][/B] Added pre emptive termantion
+[B][COLOR deepskyblue]• [/COLOR][/B] Fixed username not showing for trakt in Kodi 18
+[B][COLOR deepskyblue]• [/COLOR][/B] Fixed people search in TV Shows category
+[B][COLOR deepskyblue]• [/COLOR][/B] Added Hulu and Youtube Red to Networks category
+[B][COLOR deepskyblue]• [/COLOR][/B] Cleaned up scrapers
+[B][COLOR deepskyblue]• [/COLOR][/B] Fixed cf scrape - Thanks to MrEggman
+[B][COLOR deepskyblue]• [/COLOR][/B] New category Collections added - Thanks to MrClownman
+
+[B][COLOR limegreen]v2.0.1[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Fixed resume on playback for Kodi 18
+[B][COLOR deepskyblue]• [/COLOR][/B] Scrapers Update
+
+[B][COLOR limegreen]v1.0.0[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Initial release
+[B][COLOR deepskyblue]• [/COLOR][/B] Covenant Fork
+
+
+
+

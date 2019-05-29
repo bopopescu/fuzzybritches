@@ -1,2 +1,32 @@
-# fuzzybritches
-The Official Fuzzy Britches Repository
+# Fuzzy Britches Repository
+This repository is for the addons ported, modified, created, designed or hosted by "The Papaw". They include:
+
+• <B>Fuzzy Britches</B> (Exodus type)<BR>
+• <B>Kids Cove</B> (Jen based)<BR>
+• <B>PSMC Maintenance</B> (Maintenance Program)
+
+• The Fuzzy Britches addon has been ported and patched together from various other Exodus type addons, including Covenant, Incursion, Numbers. Please give credit to their respective developers.
+
+• The Kids Cove addon is a Jen type addon just for kids and include tons of old and new cartoons, anime and many old TV classic shows. Again, please give credit to their respective developers.
+
+• PSMC Maintenance Tools - Features include: Auto delete of cache at start up (optional), notifies when packages and thumbs reach a set amount of wasted storage space (you can set and change sizes), cuts down on your devices read/writes on the ROM. Also has many Backup/Restore Options, Speed test, IP check and other features. Again, please give credit to their respective developers.
+
+These addons have been tested with Kodi v18.2 and appear to be working fine unless otherwise stated.
+
+These addons are 3rd party addons, so please do not seek help from Kodi, the Kodi forums, etc..
+
+If you have issues, please post them here. All items are still being developed and should only be used for testing purposes.
+
+Please do NOT post, host or link too Youtube, social media or any other web sites without gaining approval first.
+
+  
+To Install:
+1. Download the repository. <a href="https://github.com/Wanderer189/fuzzybritches/raw/master/_zips/repository.fuzzybritches/repository.fuzzybritches-1.0.4.zip">CLICK HERE</a>
+
+2. Install "from zip file" in Kodi as you would any other downloaded addon.
+
+3. After the repo is installed, install the addon(s) of your choosing from the Fuzzy Britches Repo.
+
+
+Thanks & enjoy!<BR>
+	The Papaw
