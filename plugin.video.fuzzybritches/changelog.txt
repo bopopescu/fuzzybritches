@@ -5,6 +5,15 @@
 
  
 [COLOR deepskyblue]********************************************************************************************[/COLOR]
+[B][COLOR limegreen]v2.0.13[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
+
+[B][COLOR limegreen]v2.0.12[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
+
+[B][COLOR limegreen]v2.0.11[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
+
 [B][COLOR limegreen]v2.0.10[/COLOR][/B][B][I][COLOR red]• You will need to re-authorize Trakt after this update[/COLOR][/I][/B]
 [B][COLOR deepskyblue]• [/COLOR][/B] Fixed library so it will auto update
 [B][COLOR deepskyblue]• [/COLOR][/B] Scraper Fixes

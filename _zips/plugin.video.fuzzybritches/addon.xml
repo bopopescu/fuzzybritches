@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.fuzzybritches" version="2.0.12" name="Fuzzy Britches" provider-name="The Papaw">
+<addon id="plugin.video.fuzzybritches" version="2.0.13" name="Fuzzy Britches" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.fuzzybritches" />
@@ -16,8 +16,8 @@
 	<extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">The OFFICIAL [B]Fuzzy Britches Addon[/B]</summary>
-		<description lang="en">[B][COLOR yellow]The Official Fuzzy Britches Addon[/B][/COLOR][CR][CR][COLOR yellow]Created just for my beautiful wife (nicknamed Fuzzy Britches). I created this from love just for you Baby. Works with Kodi 18 (Leia).[/COLOR]</description>
-		<disclaimer lang="en">The author of this addon does NOT host any of the content which is found and has no affiliation with any of the content providers. This addon simply searches websites for content. This addon does not form part of the Kodi Media Center. Please do not seek assistance with this addon from any of the Official Kodi Support Channels. Use at your own risk! The code for this addon was created by others and pathed together by The Papaw.</disclaimer>
+		<description lang="en">[B][COLOR yellow]The Official Fuzzy Britches Addon[/B][/COLOR][CR][CR][COLOR yellow]Created just for my beautiful wife (nicknamed Fuzzy Britches). I created this from love just for you Baby! Works with PSMC as well as Kodi 18.[/COLOR]</description>
+		<disclaimer lang="en">The author of this addon does NOT host any of the content which is found and has no affiliation with any of the content providers. This addon simply searches websites for content. This addon does not form part of the Kodi Media Center. Please do not seek assistance with this addon from any of the Official Kodi Support Channels. Use at your own risk! The code for this addon was cloned from others and modded and patched together by The Papaw.</disclaimer>
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
 		<assets>
