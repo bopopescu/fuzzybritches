@@ -101,40 +101,6 @@
     </extension>
 </addon>
 
-<addon id="repository.aeon.nox.silvo" name="Aeon Nox: SiLVO Repository" version="1.0.5" provider-name="SiLVO">
-	<requires>
-		<import addon="xbmc.addon" version="12.0.0"/>
-	</requires>
-	<extension point="xbmc.addon.repository" name="Aeon Nox: SiLVO Repo">
-		<dir minversion="15.0.0">
-			<info compressed="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/isengard/addons.xml</info>
-			<checksum>https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/isengard/addons.xml.md5</checksum>
-			<datadir zip="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/isengard</datadir>
-		</dir>
-		<dir minversion="16.0.0">
-			<info compressed="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/jarvis/addons.xml</info>
-			<checksum>https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/jarvis/addons.xml.md5</checksum>
-			<datadir zip="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/jarvis</datadir>
-		</dir>
-		<dir minversion="17.0.0">
-			<info compressed="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/krypton/addons.xml</info>
-			<checksum>https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/krypton/addons.xml.md5</checksum>
-			<datadir zip="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/krypton</datadir>
-		</dir>
-		<dir minversion="17.9.0">
-			<info compressed="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/leia/addons.xml</info>
-			<checksum>https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/leia/addons.xml.md5</checksum>
-			<datadir zip="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/leia</datadir>
-		</dir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>My version of Aeon Nox 5</summary>
-		<description>Main Repository for Aeon Nox: SiLVO</description>
-		<platform>all</platform>
-		<news>[I]v1.0.5[/I][CR]- Leia support</news>
-	</extension>
-</addon>
-
     <addon id="repository.fuzzybritches" name="Fuzzy Britches Repository" version="1.0.6" provider-name="The Papaw">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
@@ -166,7 +132,7 @@
         </extension>
     </addon>
 
-<addon id="repository.psmc" name="PSMC Repository" version="1.0.5" provider-name="The Papaw">
+<addon id="repository.psmc" name="PSMC Repository" version="1.0.8" provider-name="The Papaw">
     <requires>
         <import addon="xbmc.addon" version="12.0.0"/>
     </requires>
@@ -252,6 +218,24 @@
 	      <icon>icon.png</icon>
 		  <fanart>fanart.jpg</fanart>
 		</assets>
+	</extension>
+</addon>
+
+<addon id="script.libraryeditor" name="Library Editor Script" version="0.9.0" provider-name="phil65">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.simplejson" version="2.0.10"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<language/>
+		<summary lang="en">Library Editor Script</summary>
+		<description lang="en">This script makes it possible to edit movie details manually from within XBMC. Needs Skin Support</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
+		<forum>-</forum>
+		<source>-</source>
+		<email>-</email>
 	</extension>
 </addon>
 
@@ -361,6 +345,116 @@
 		<description lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
 		<forum>https://www.tvaddons.co/forums</forum>
         <website>https://www.tvaddons.co</website>
+	</extension>
+</addon>
+
+<addon id="script.moviesetart" name="Movie Set Artwork Automator" version="0.2.2" provider-name="Trent Fitzgibbon">
+	<extension point="xbmc.python.script" library="default.py">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<language />
+		<platform>all</platform>
+		<summary>Movie Set Artwork Automator</summary>
+		<description>This addon will automatically set artwork for all movie sets in your library.
+
+			The addon can search for common parent folders of movies within a set or you can specify a single artwork folder containing artwork for all your movie sets (eg &lt;set name&gt;-poster.jpg).</description>
+		</extension>
+	</addon>
+
+<addon id="script.skin.info.service" name="Skin Info Service" version="1.0.3" provider-name="phil65">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+	</requires>
+	<extension point="xbmc.python.library"          library="default.py" />
+	<extension point="xbmc.python.script"           library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<language/>
+		<summary lang="en">Script used by skins to show extended media info.</summary>
+		<description lang="en">This script fetches extended information for several media types (artists, albums, movie sets etc.). Needs skin support.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
+		<forum />
+		<source />
+		<email />
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+		<news>Kodi v18 updates</news>
+	</extension>
+</addon>
+
+<addon id="skin.psmc.silvo" version="1.0.9" name="PSMC Silvo Skin" provider-name="The Papaw">
+	<requires>
+		<import addon="xbmc.gui" version="5.14.0" />
+		<import addon="script.skinshortcuts" version="1.0.10" />
+		<import addon="service.library.data.provider" version="0.0.7" />
+		<import addon="script.grab.fanart" version="0.12.8" />
+		<import addon="resource.images.studios.white" version="0.0.1" />
+		<import addon="resource.images.recordlabels.white" version="0.0.1" />
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Created by BigNoid, Modded by SiLVO, Widgets by Mr. V and themed by The Papawfor the PSMC theme</summary>
+		<description lang="en">Themed from Aeon Nox SiLVO v7.0.1 to better match PSMC. Please give credit to Mike, The Papaw and all others that contributed.</description>
+		<platform>all</platform>
+		<license></license>
+		<forum></forum>
+		<website>https://github.com/ThePapaw/psmc</website>
+		<source>https://github.com/ThePapaw/psmc</source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-09.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-10.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-11.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-12.jpg</screenshot>
+		</assets>
+		<news>This skin was cloned and modded from the Aeon Nox SiLVO v7.0.1. Please give credit to Mike and all others that contributed to the code used.</news>
+	</extension>
+</addon>
+
+<addon id="skin.psmc.spiderman" version="1.0.9" name="PSMC's Spiderman" provider-name="The Papaw">
+	<requires>
+		<import addon="xbmc.gui" version="5.14.0" />
+		<import addon="script.skinshortcuts" version="1.0.10" />
+		<import addon="service.library.data.provider" version="0.0.7" />
+		<import addon="script.grab.fanart" version="0.12.8" />
+		<import addon="resource.images.studios.white" version="0.0.1" />
+		<import addon="resource.images.recordlabels.white" version="0.0.1" />
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Created by BigNoid, Modded by SiLVO, Widgets by Mr. V and themed by The Papaw</summary>
+		<description lang="en">Themed from Aeon Nox SiLVO v7.0.1 to better match PSMC. Please give credit to Mike, The Papaw and all others that contributed.</description>
+		<platform>all</platform>
+		<license></license>
+		<forum></forum>
+		<website>https://github.com/ThePapaw/psmc</website>
+		<source>https://github.com/ThePapaw/psmc</source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-05.jpg</screenshot>
+		</assets>
+		<news>This skin was cloned and modded from the Aeon Nox SiLVO v7.0.1. Please give credit to Mike and all others that contributed to the code used</news>
 	</extension>
 </addon>
 </addons>
