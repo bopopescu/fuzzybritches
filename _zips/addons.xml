@@ -58,8 +58,7 @@
 			<screenshot>resources/media/screenshot-02.jpg</screenshot>
 			<screenshot>resources/media/screenshot-03.jpg</screenshot>
 		</assets>
-		<news>V2.0.9
-- Nothing new at this time.</news>
+		<news></news>
 	</extension>
 </addon>
 
