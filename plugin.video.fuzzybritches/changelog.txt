@@ -2,9 +2,13 @@
 
 [B][COLOR lime]• [/COLOR][/B][COLOR deepskyblue]CURRENT STATUS:[/COLOR] All is working great except for:
 [B][COLOR red]• Documentary section is down[/COLOR][/B]
+[B][COLOR blue]• All torrent scrapers are OFF by default, you can turn them in the FB settings.[/COLOR][/B]
 
  
 [COLOR deepskyblue]********************************************************************************************[/COLOR]
+[B][COLOR limegreen]v2.0.14[/COLOR][/B][B][I][COLOR red]• You will need to re-authorize Trakt after this update[/COLOR][/I][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Worked on Scrapers
+
 [B][COLOR limegreen]v2.0.13[/COLOR][/B]
 [B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
 
