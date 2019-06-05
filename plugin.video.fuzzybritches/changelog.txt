@@ -9,7 +9,7 @@
 [B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
 
 [B][COLOR limegreen]v2.0.14[/COLOR][/B][B][I][COLOR red]• You will need to re-authorize Trakt after this update[/COLOR][/I][/B]
-[B][COLOR deepskyblue]• [/COLOR][/B] Worked on Scrapers [I](The torrent scrapers are turned OFF by default, you can turn them on the Fuzzy Britches settings.)[/I]
+[B][COLOR deepskyblue]• [/COLOR][/B] Worked on Scrapers [I](The torrent scrapers are turned OFF by default, you can turn them on in the Fuzzy Britches settings.)[/I]
 
 [B][COLOR limegreen]v2.0.13[/COLOR][/B]
 [B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
