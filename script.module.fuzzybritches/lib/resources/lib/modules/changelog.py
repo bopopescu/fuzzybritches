@@ -1,6 +1,4 @@
 '''
-    Copyright (C) 2013 Sean Poyser (seanpoyser@gmail.com)
-
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -34,7 +32,7 @@ def get():
 			try:
 				xbmc.sleep(10)
 				retry -= 1
-				win.getControl(1).setLabel('NuMbErS Version: %s' %(xbmcaddon.Addon().getAddonInfo('version')))
+				win.getControl(1).setLabel('Fuzzy Britches: %s' %(xbmcaddon.Addon().getAddonInfo('version')))
 				win.getControl(5).setText(text)
 				return
 			except:

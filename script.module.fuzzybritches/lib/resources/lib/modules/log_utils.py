@@ -1,7 +1,4 @@
 """
-    tknorris shared module
-    Copyright (C) 2016 tknorris
-
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -32,7 +29,7 @@ from xbmc import (LOGDEBUG, LOGERROR, LOGFATAL, LOGINFO,  # @UnusedImport
 
 name = control.addonInfo('name')
 # Using color coding, for color formatted log viewers like Assassin's Tools
-DEBUGPREFIX = '[COLOR red][ NUMBERS DEBUG ][/COLOR]'
+DEBUGPREFIX = '[COLOR red][ Fuzzy Britches DEBUG ][/COLOR]'
 LOGPATH = xbmc.translatePath('special://logpath/')
 
 
