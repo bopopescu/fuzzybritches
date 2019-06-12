@@ -1,7 +1,18 @@
 # -*- coding: utf-8 -*-
 
 '''
-    Fuzzy Britches Add-on
+ ███▄    █  █    ██  ███▄ ▄███▓ ▄▄▄▄   ▓█████  ██▀███    ██████ 
+ ██ ▀█   █  ██  ▓██▒▓██▒▀█▀ ██▒▓█████▄ ▓█   ▀ ▓██ ▒ ██▒▒██    ▒ 
+▓██  ▀█ ██▒▓██  ▒██░▓██    ▓██░▒██▒ ▄██▒███   ▓██ ░▄█ ▒░ ▓██▄   
+▓██▒  ▐▌██▒▓▓█  ░██░▒██    ▒██ ▒██░█▀  ▒▓█  ▄ ▒██▀▀█▄    ▒   ██▒
+▒██░   ▓██░▒▒█████▓ ▒██▒   ░██▒░▓█  ▀█▓░▒████▒░██▓ ▒██▒▒██████▒▒
+░ ▒░   ▒ ▒ ░▒▓▒ ▒ ▒ ░ ▒░   ░  ░░▒▓███▀▒░░ ▒░ ░░ ▒▓ ░▒▓░▒ ▒▓▒ ▒ ░
+░ ░░   ░ ▒░░░▒░ ░ ░ ░  ░      ░▒░▒   ░  ░ ░  ░  ░▒ ░ ▒░░ ░▒  ░ ░
+   ░   ░ ░  ░░░ ░ ░ ░      ░    ░    ░    ░     ░░   ░ ░  ░  ░  
+         ░    ░            ░    ░         ░  ░   ░           ░  
+                                     ░                          
+
+    NuMbErS Add-on
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -261,15 +272,15 @@ def _find_cache_version():
             f.close()
     except Exception:
         import xbmc
-        print 'Fuzzy Britches Addon Data Path Does not Exist. Creating Folder....'
-        ad_folder = xbmc.translatePath('special://home/userdata/addon_data/plugin.video.fuzzybritches')
+        print 'NuMbErS Addon Data Path Does not Exist. Creating Folder....'
+        ad_folder = xbmc.translatePath('special://home/userdata/addon_data/plugin.video.numbersbynumbers')
         os.makedirs(ad_folder)
 
     try:
         with open(versionFile, 'rb') as fh: oldVersion = fh.read()
     except: oldVersion = '0'
     try:
-        curVersion = control.addon('script.module.fuzzybritches').getAddonInfo('version')
+        curVersion = control.addon('script.module.numbersbynumbers').getAddonInfo('version')
         if oldVersion != curVersion:
             with open(versionFile, 'wb') as fh: fh.write(curVersion)
             return True

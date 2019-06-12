@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 
 '''
+    Genesis Add-on
+    Copyright (C) 2015 Blazetamer
+    Copyright (C) 2015 lambda
+    Copyright (C) 2015 spoyser
+    Copyright (C) 2015 crzen
+
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
