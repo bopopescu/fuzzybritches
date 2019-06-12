@@ -286,7 +286,7 @@ Please give credit to all the devolopers that have and do contribute!
 	</extension>
 </addon>
 
-<addon id="script.module.fuzzybritches" name="Fuzzy Britches Module" version="2.0.11" provider-name="The Papaw">
+<addon id="script.module.fuzzybritches" name="Fuzzy Britches Module" version="2.0.12" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
