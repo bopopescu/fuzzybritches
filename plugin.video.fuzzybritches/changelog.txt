@@ -5,6 +5,13 @@
 
  
 [COLOR deepskyblue]********************************************************************************************[/COLOR]
+[B][COLOR limegreen]v2.0.17[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Scraper Fixes
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
+
+[B][COLOR limegreen]v2.0.16[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
+
 [B][COLOR limegreen]v2.0.15[/COLOR][/B]
 [B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
 
