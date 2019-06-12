@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.fuzzybritches" version="2.0.16" name="Fuzzy Britches" provider-name="The Papaw">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.fuzzybritches" />
+		<import addon="script.fuzzybritches.artwork" />
+		<import addon="script.fuzzybritches.metadata" />
+		<import addon="script.module.resolveurl" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" />
+		<import addon="plugin.video.youtube" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="fuzzybritches.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">The OFFICIAL [B]Fuzzy Britches Addon[/B]</summary>
+		<description lang="en">[B][COLOR yellow]The Official Fuzzy Britches Addon[/B][/COLOR][CR][CR][COLOR yellow]Created just for my beautiful wife (nicknamed Fuzzy Britches). I created this from love just for you Baby! Works with PSMC as well as Kodi 18.[/COLOR]</description>
+		<disclaimer lang="en">The author of this addon does NOT host any of the content which is found and has no affiliation with any of the content providers. This addon simply searches websites for content. This addon does not form part of the Kodi Media Center. Please do not seek assistance with this addon from any of the Official Kodi Support Channels. Use at your own risk! The code for this addon was cloned from others and modded and patched together by The Papaw.</disclaimer>
+		<platform>all</platform>
+		<license></license>
+		<forum></forum>
+		<website>https://github.com/ThePapaw/fuzzybritches</website>
+		<source>https://github.com/ThePapaw/fuzzybritches</source>
+		<video_guide></video_guide>
+		<assets>
+			<icon>icon.gif</icon>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/media/screenshot-01.jpg</screenshot>
+			<screenshot>resources/media/screenshot-02.jpg</screenshot>
+			<screenshot>resources/media/screenshot-03.jpg</screenshot>
+		</assets>
+		
+		<news>
+[COLOR blue]• [/COLOR]Cosmetic Fixes
+[COLOR blue]• [/COLOR]Redone Weather/Time
+
+Please give credit to all the devolopers that have and do contribute to this skin!
+        </news>
+	</extension>
+</addon>
