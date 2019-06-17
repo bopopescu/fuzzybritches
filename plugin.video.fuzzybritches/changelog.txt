@@ -1,7 +1,6 @@
 [B][COLOR deepskyblue]• [/COLOR][/B][B][COLOR yellow] FUZZY BRITCHES LATEST UPDATES [/COLOR][/B][B][COLOR deepskyblue] •[/COLOR][/B]
 
-[B][COLOR lime]• [/COLOR][/B][COLOR deepskyblue]CURRENT STATUS:[/COLOR] All is working great except for:
-[B][COLOR red]• Documentary section is down[/COLOR][/B]
+[B][COLOR lime]• [/COLOR][/B][COLOR deepskyblue]CURRENT STATUS:[/COLOR] All is working great !
 
  
 [COLOR deepskyblue]********************************************************************************************[/COLOR]
