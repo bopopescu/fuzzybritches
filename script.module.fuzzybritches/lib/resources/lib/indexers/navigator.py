@@ -50,7 +50,7 @@ class navigator:
             self.addDirectoryItem(32708, 'tvNetworks', 'networks.png', 'DefaultTVShows.png')
             self.addDirectoryItem(32709, 'boxsetsNavigator', 'boxsets1.png', 'boxsets1.png')
 
-        self.addDirectoryItem(32700, 'docuHeaven', 'documentaries.png', 'DefaultMovies.png')
+#        self.addDirectoryItem(32700, 'docuHeaven', 'documentaries.png', 'DefaultMovies.png')
 
         self.addDirectoryItem(32008, 'toolNavigator', 'tools.png', 'DefaultAddonProgram.png')
 
