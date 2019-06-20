@@ -34,7 +34,6 @@
     <category label="32621">
         <setting type="lsep" label="32622" />
         <setting type="lsep" label="32001" />
-        <setting id="navi.moviereview" type="bool" label="32623" default="true" />
         <setting id="navi.moviegenre" type="bool" label="32011" default="true" />
         <setting id="navi.movieyears" type="bool" label="32012" default="true" />
         <setting id="navi.moviepersons" type="bool" label="32013" default="true" />
@@ -48,7 +47,6 @@
         <setting id="navi.movietheaters" type="bool" label="32022" default="true" />
         <setting id="navi.moviewidget" type="bool" label="32005" default="true" />
         <setting type="lsep" label="32002" />
-        <setting id="navi.tvReviews" type="bool" label="32623" default="true" />
         <setting id="navi.tvGenres" type="bool" label="32011" default="true" />
         <setting id="navi.tvNetworks" type="bool" label="32016" default="true" />
         <setting id="navi.tvLanguages" type="bool" label="32014" default="true" />

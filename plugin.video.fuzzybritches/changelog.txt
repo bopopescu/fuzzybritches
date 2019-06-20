@@ -4,6 +4,9 @@
 
  
 [COLOR deepskyblue]********************************************************************************************[/COLOR]
+[B][COLOR limegreen]v2.0.23[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes.
+
 [B][COLOR limegreen]v2.0.22[/COLOR][/B]
 [B][COLOR deepskyblue]• [/COLOR][/B] Removed Youtube from being installed as dependancy.
 

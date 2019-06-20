@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.fuzzybritches" version="2.0.22" name="Fuzzy Britches" provider-name="The Papaw">
+<addon id="plugin.video.fuzzybritches" version="2.0.23" name="Fuzzy Britches" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.fuzzybritches" />
@@ -30,11 +30,14 @@
 			<screenshot>resources/media/screenshot-01.jpg</screenshot>
 			<screenshot>resources/media/screenshot-02.jpg</screenshot>
 			<screenshot>resources/media/screenshot-03.jpg</screenshot>
+			<screenshot>resources/media/screenshot-04.jpg</screenshot>
+			<screenshot>resources/media/screenshot-05.jpg</screenshot>
+			<screenshot>resources/media/screenshot-06.jpg</screenshot>
+			<screenshot>resources/media/screenshot-07.jpg</screenshot>
 		</assets>
 		
 		<news>
-[COLOR blue]• [/COLOR]Removed Documentary Section
-[COLOR blue]• [/COLOR]Removed Youtube from being installed as dependancy.
+[COLOR blue]• [/COLOR]Cosmetic Fixes.
 
 Please give credit to all the devolopers that have and do contribute to this skin!
         </news>
