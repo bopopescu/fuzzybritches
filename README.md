@@ -18,7 +18,7 @@ The SKINS here were themed and/or modded for using with PSMC 18. They work with 
 • <B>PSMC's Silvo Skin</B> - General Aeon Nox SiLVO skin themed for PSMC/Kodi 18<BR>
 • <B>PSMC's Spiderman</B> - Spiderman Theme modded and brought up-to-date for PSMC/Kodi 18<BR>
 • <B>PSMC's Man of Steel</B> - Man of Steel Theme modded and brought up-to-date for PSMC/Kodi 18<BR>
-• <B>PSMC's Super Mario Galaxy</B> - Super Mario Galaxy Theme modded and brought up-to-date for PSMC/Kodi 18 (don't forget to download the companion UI sounds for the skin!)
+• <B>PSMC's Super Mario Galaxy</B> - Super Mario Galaxy Theme modded and brought up-to-date for PSMC/Kodi 18 (If you wish to use the included <B>MARIO GUI SOUNDS</B>, you need to enable them in the system settings!)
 
 These addons are 3rd party addons, so please do not seek help from Kodi, the Kodi forums, etc..
 
@@ -28,7 +28,7 @@ Please do NOT post, host or link too Youtube, social media or any other web site
 
   
 To Install:
-1. Download the repository. <a href="https://github.com/ThePapaw/fuzzybritches/blob/master/_zips/repository.fuzzybritches/repository.fuzzybritches-1.0.8.zip?raw=true">CLICK HERE</a>
+1. Download the repository. <a href="https://github.com/ThePapaw/fuzzybritches/blob/master/_zips/repository.fuzzybritches/repository.fuzzybritches-1.0.10.zip?raw=true">CLICK HERE</a>
 
 2. Install "from zip file" in Kodi as you would any other downloaded addon.
 
