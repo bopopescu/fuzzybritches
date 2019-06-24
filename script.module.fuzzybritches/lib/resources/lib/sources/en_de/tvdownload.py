@@ -27,7 +27,7 @@ class source:
     def __init__(self):
         self.priority = 1
         self.language = ['en']
-        self.domains = ['tvdownload.net']
+        self.domains = ['rlsscn.in']
         self.base_link = 'http://tvdownload.net/'
         self.search_link = '/?s=%s'
 
@@ -38,7 +38,7 @@ class source:
             url = {'imdb': imdb, 'title': title, 'year': year, 'url': url2, 'content': 'movie'}
             url = urllib.urlencode(url)
             return url
-        except Exception:
+        except BaseException:
             return
 
 
@@ -47,7 +47,7 @@ class source:
             url = {'imdb': imdb, 'tvdb': tvdb, 'tvshowtitle': tvshowtitle, 'year': year}
             url = urllib.urlencode(url)
             return url
-        except Exception:
+        except BaseException:
             return
 
 
@@ -67,7 +67,7 @@ class source:
             url = {'imdb': imdb, 'title': title, 'year': year, 'url': url2, 'content': 'episdoe', 'tvshowtitle': tvshowtitle, 'season': season, 'episode': episode, 'premiered': premiered}
             url = urllib.urlencode(url)
             return url
-        except Exception:
+        except BaseException:
             return
 
     def sources(self, url, hostDict, hostprDict):
@@ -139,16 +139,16 @@ class source:
                                 size = float(re.sub('[^0-9|/.|/,]', '', size))/div
                                 size = '%.2f GB' % size
                                 info.append(size)
-                            except Exception:
+                            except BaseException:
                                 pass
 
                             info = ' | '.join(info)
 
                             sources.append({'source': host, 'quality': quality, 'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True})
-                        except Exception: pass
-                except Exception: pass
+                        except BaseException: pass
+                except BaseException: pass
             return sources
-        except Exception:
+        except BaseException:
              return sources
 
     def resolve(self, url):

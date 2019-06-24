@@ -200,23 +200,23 @@ msgid "No Trakt or IMDb account found."
 msgstr ""
 
 msgctxt "#32043"
-msgid "[B][COLOR lightslategrey]SETTINGS[/COLOR][/B] : General"
+msgid "[B][COLOR blue]SETTINGS[/COLOR][/B] : General"
 msgstr ""
 
 msgctxt "#32044"
-msgid "[B][COLOR lightslategrey]SETTINGS[/COLOR][/B] : Accounts"
+msgid "[B][COLOR blue]SETTINGS[/COLOR][/B] : Accounts"
 msgstr ""
 
 msgctxt "#32045"
-msgid "[B][COLOR lightslategrey]SETTINGS[/COLOR][/B] : Playback"
+msgid "[B][COLOR blue]SETTINGS[/COLOR][/B] : Playback"
 msgstr ""
 
 msgctxt "#32046"
-msgid "[B][COLOR lightslategrey]SETTINGS[/COLOR][/B] : Subtitles"
+msgid "[B][COLOR blue]SETTINGS[/COLOR][/B] : Subtitles"
 msgstr ""
 
 msgctxt "#32047"
-msgid "[B][COLOR lightslategrey]SETTINGS[/COLOR][/B] : Providers"
+msgid "[B][COLOR blue]SETTINGS[/COLOR][/B] : Providers"
 msgstr ""
 
 msgctxt "#32048"
@@ -256,7 +256,7 @@ msgid "Are you sure?"
 msgstr ""
 
 msgctxt "#32057"
-msgid "Fuzzy Britches is READY!"
+msgid "Fuzzy Britches is READY to go!"
 msgstr ""
 
 msgctxt "#32058"
@@ -716,7 +716,7 @@ msgid "Configure Debrid Services in ResolveURL Settings."
 msgstr ""
 
 msgctxt "#32540"
-msgid "[B][COLOR lightslategrey]ResolveURL[/COLOR][/B] : Settings"
+msgid "[B][COLOR yellow]ResolveURL[/COLOR][/B] : Settings"
 msgstr ""
 
 msgctxt "#32541"
@@ -948,7 +948,7 @@ msgid "Unaired Season/Episode Color"
 msgstr ""
 
 msgctxt "#32609"
-msgid "[B][COLOR lightslategrey]ResolveURL[/COLOR][/B] : Settings"
+msgid "[B][COLOR yellow]ResolveURL[/COLOR][/B] : Settings"
 msgstr ""
 
 msgctxt "#32613"
@@ -992,7 +992,7 @@ msgid "Categories"
 msgstr ""
 
 msgctxt "#32628"
-msgid "[B][COLOR lightslategrey]SETTINGS[/COLOR][/B] : Navigation"
+msgid "[B][COLOR blue]SETTINGS[/COLOR][/B] : Navigation"
 msgstr ""
 
 msgctxt "#32630"
@@ -1089,6 +1089,10 @@ msgstr ""
 
 msgctxt "#70002"
 msgid "Torrent Providers"
+msgstr ""
+
+msgctxt "#70003"
+msgid "Providers (2)"
 msgstr ""
 
 msgctxt "#32711"

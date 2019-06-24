@@ -4,6 +4,13 @@
 
  
 [COLOR deepskyblue]********************************************************************************************[/COLOR]
+[B][COLOR limegreen]v2.1.0 (06-24-19)[/COLOR][/B]
+[B][I][COLOR red]• You will need to re-authorize Trakt after this update[/COLOR][/I][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Updated Modules
+[B][COLOR deepskyblue]• [/COLOR][/B] Added more Scrapers
+[B][COLOR deepskyblue]• [/COLOR][/B] Scraper Fixes[I](The torrent scrapers are now turned ON by default, you can turn them off in the Fuzzy Britches settings.)[/I]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
+
 [B][COLOR limegreen]v2.0.23[/COLOR][/B]
 [B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes.
 
