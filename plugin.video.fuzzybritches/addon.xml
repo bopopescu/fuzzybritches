@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.fuzzybritches" version="2.1.0" name="Fuzzy Britches" provider-name="The Papaw">
+<addon id="plugin.video.fuzzybritches" version="2.1.1" name="Fuzzy Britches" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.fuzzybritches" />
@@ -37,11 +37,9 @@
 		</assets>
 		
 		<news>
-[COLOR yellow]• [/COLOR]Changes to v2.1.0 - (06-24-19)
+[COLOR yellow]• [/COLOR]Changes to v2.1.0 - (06-25-19)
 [COLOR blue]• [/COLOR]Updated Modules
 [COLOR blue]• [/COLOR]Added more Scrapers
-[COLOR blue]• [/COLOR]Scraper Fixes
-[COLOR blue]• [/COLOR]Cosmetic Fixes
 
 Please give credit to all the devolopers that have and do contribute to this skin!
         </news>

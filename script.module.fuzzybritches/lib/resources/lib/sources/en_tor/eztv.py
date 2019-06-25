@@ -1,40 +1,36 @@
 # -*- coding: utf-8 -*-
-#######################################################################
-# ----------------------------------------------------------------------------
-# "THE BEER-WARE LICENSE" (Revision 42):
-#  As long as you retain this notice you
-# can do whatever you want with this stuff. If we meet some day, and you think
-# this stuff is worth it, you can buy me a beer in return. - Muad'Dib
-# ----------------------------------------------------------------------------
-#######################################################################
 
-# Addon Name: Atreides
-# Addon id: plugin.video.atreides
-# Addon Provider: House Atreides
+'''
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+'''
 
 import re
 import traceback
 import urllib
 import urlparse
 
-from resources.lib.modules import cache, cleantitle, client, control, debrid, log_utils, source_utils
+from resources.lib.modules import cleantitle, client, control, debrid, log_utils, source_utils
 
 
 class source:
     def __init__(self):
         self.priority = 1
         self.language = ['en']
-        self.domains = ['eztv.io', 'eztv.wf', 'eztv.tf', 'eztv.yt', 'eztv.re', 'eztv.ag', 'eztv.it', 'eztv.ch']
-        self._base_link = None
+        self.domains = ['eztv.io']
+        self.base_link = 'https://eztv.io/'
         self.search_link = '/search/%s'
         self.min_seeders = int(control.setting('torrent.min.seeders'))
-
-    @property
-    def base_link(self):
-        if self._base_link is None:
-            self._base_link = cache.get(self.__get_base_url, 120, 'https://%s' % self.domains[0])
-        return self._base_link
 
     def tvshow(self, imdb, tvdb, tvshowtitle, localtvshowtitle, aliases, year):
         if debrid.status(True) is False:
@@ -45,8 +41,7 @@ class source:
             url = urllib.urlencode(url)
             return url
         except Exception:
-            failure = traceback.format_exc()
-            log_utils.log('EZTV - Exception: \n' + str(failure))
+            
             return
 
     def episode(self, url, imdb, tvdb, title, premiered, season, episode):
@@ -63,8 +58,7 @@ class source:
             url = urllib.urlencode(url)
             return url
         except Exception:
-            failure = traceback.format_exc()
-            log_utils.log('EZTV - Exception: \n' + str(failure))
+            
             return
 
     def sources(self, url, hostDict, hostprDict):
@@ -143,8 +137,7 @@ class source:
                     sources.append({'source': 'Torrent', 'quality': quality, 'language': 'en',
                                     'url': link, 'info': info, 'direct': False, 'debridonly': True})
                 except Exception:
-                    failure = traceback.format_exc()
-                    log_utils.log('EZTV - Cycle Broken: \n' + str(failure))
+                    
                     continue
 
             check = [i for i in sources if not i['quality'] == 'CAM']
@@ -153,25 +146,8 @@ class source:
 
             return sources
         except Exception:
-            failure = traceback.format_exc()
-            log_utils.log('EZTV - Exception: \n' + str(failure))
+            
             return sources
-
-    def __get_base_url(self, fallback):
-        try:
-            for domain in self.domains:
-                try:
-                    url = 'https://%s' % domain
-                    result = client.request(url, timeout='10')
-                    search_n = re.findall('<input type="txt" name="(.+?)"', result, re.DOTALL)[0]
-                    if search_n and 'q1' in search_n:
-                        return url
-                except Exception:
-                    pass
-        except Exception:
-            pass
-
-        return fallback
 
     def resolve(self, url):
         return url

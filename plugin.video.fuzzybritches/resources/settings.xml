@@ -98,7 +98,8 @@
         <setting id="provider.123moviehd" type="bool" label="$NUMBER[123]MOVIEHD" default="true" />
         <setting id="provider.123movies4u" type="bool" label="$NUMBER[123]MOVIES$NUMBER[4]U" default="true" />
         <setting id="provider.123123movies" type="bool" label="$NUMBER[123123]MOVIES" default="true" />
-        <setting id="provider.300mbfilms" type="bool" label="$NUMBER[300]MBFILMS" default="true" />
+        <setting id="provider.300mbfilms" type="bool" label="$NUMBER[300]MBFILMS" default="true" />/>
+        <setting id="provider.allucxyz" type="bool" label="ALLUCXYZ" default="false" />
         <setting id="provider.animetoon" type="bool" label="ANIMETOON" default="false" />
         <setting id="provider.bnwmovies" type="bool" label="BNWMOVIES" default="false" />  
         <setting id="provider.cartoonhd" type="bool" label="CARTOONHD" default="true" />
@@ -141,7 +142,7 @@
         <setting id="provider.mycouchtuner" type="bool" label="MYCOUCHTUNER" default="true" />
         <setting id="provider.myprojectfreetv" type="bool" label="MYPROJECTFREETV" default="true" />
         <setting id="provider.myvideolink" type="bool" label="MYVIDEOLINK" default="true" />
-        <setting id="provider.naturalbd" type="bool" label="NATURALBD" default="true" />
+        <setting id="provider.naturalbd" type="bool" label="NATURALBD" default="false" />
         <setting id="provider.odb" type="bool" label="ODB" default="true" />
         <setting id="provider.onlineseries" type="bool" label="ONLINESERIES" default="true" />
         <setting id="provider.ororo" type="bool" label="ORORO" default="true" /> 
@@ -161,7 +162,7 @@
         <setting id="provider.seehd" type="bool" label="SEEHD" default="true" />
         <setting id="provider.series9" type="bool" label="SERIES9" default="true" />
         <setting id="provider.seriesfree" type="bool" label="SERIESFREE" default="true" />  
-        <setting id="provider.seriesonline" type="bool" label="SERIESONLINE" default="true" /> 
+        <setting id="provider.seriesonline" type="bool" label="SERIESONLINE" default="false" /> 
         <setting id="provider.sezonlukdizi" type="bool" label="SEZONLUKDIZI" default="true" />
         <setting id="provider.shaanig" type="bool" label="SHAANIG" default="true" />
         <setting id="provider.solarmoviefree" type="bool" label="SOLARMOVIEFREE" default="true" />
@@ -171,11 +172,11 @@
         <setting id="provider.tvbox" type="bool" label="TVBOX" default="true" />
         <setting id="provider.ultrahdindir" type="bool" label="ULTRAHDINDIR" default="true" />
         <setting id="provider.uwatchfree" type="bool" label="UWATCHFREE" default="true" />
-        <setting id="provider.vidics" type="bool" label="VIDICS" default="true" />
     </category>
 	
 	<category label="70003">
-        <setting label="70003" type="lsep" />		
+        <setting label="70003" type="lsep" />
+        <setting id="provider.vidics" type="bool" label="VIDICS" default="true" />		
         <setting id="provider.wannahd" type="bool" label="WANNAHD" default="true" />
         <setting id="provider.watch32" type="bool" label="WATCH32" default="true" /> 
         <setting id="provider.watchepisodes" type="bool" label="WATCHEDISODES" default="true" />
@@ -226,7 +227,8 @@
         <setting id="provider.kickass2" type="bool" label="KICKASS2" default="true" /> 
         <setting id="provider.limetorrents" type="bool" label="LIMETORRENTS" default="true" />
         <setting id="provider.magnetdl" type="bool" label="MAGNETDL" default="true" /> 
-        <setting id="provider.mkvcagetorr" type="bool" label="MKYCAGETORR" default="true" /> 
+        <setting id="provider.mkvcagetorr" type="bool" label="MKYCAGETORR" default="true" />
+        <setting id="provider.mkvhub" type="bool" label="MKVHUB" default="true" /> 
         <setting id="provider.piratebay" type="bool" label="PIRATEBAY" default="true" /> 
         <setting id="provider.skytorrents" type="bool" label="SKYTORRENTS" default="false" /> 
         <setting id="provider.tpb" type="bool" label="TPB" default="true" />  
