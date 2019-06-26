@@ -99,9 +99,9 @@
         <setting id="provider.123movies4u" type="bool" label="$NUMBER[123]MOVIES$NUMBER[4]U" default="true" />
         <setting id="provider.123123movies" type="bool" label="$NUMBER[123123]MOVIES" default="true" />
         <setting id="provider.300mbfilms" type="bool" label="$NUMBER[300]MBFILMS" default="true" />/>
-        <setting id="provider.allucxyz" type="bool" label="ALLUCXYZ" default="false" />
-        <setting id="provider.animetoon" type="bool" label="ANIMETOON" default="false" />
-        <setting id="provider.bnwmovies" type="bool" label="BNWMOVIES" default="false" />  
+        <setting id="provider.allucxyz" type="bool" label="ALLUCXYZ" default="true" />
+        <setting id="provider.animetoon" type="bool" label="ANIMETOON" default="true" />
+        <setting id="provider.bnwmovies" type="bool" label="BNWMOVIES" default="true" />  
         <setting id="provider.cartoonhd" type="bool" label="CARTOONHD" default="true" />
         <setting id="provider.cartoonwire" type="bool" label="CARTOONWIRE" default="true" />
         <setting id="provider.cmovieshd" type="bool" label="CMOVIESHD" default="true" /> 
