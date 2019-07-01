@@ -30,7 +30,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.fuzzybritches" version="2.1.3" name="Fuzzy Britches" provider-name="The Papaw">
+<addon id="plugin.video.fuzzybritches" version="2.1.4" name="Fuzzy Britches" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.fuzzybritches" />
@@ -68,8 +68,9 @@
 		</assets>
 
 		<news>
-[COLOR yellow]• Latest Changes[/COLOR] - (06-26-19)
-[COLOR blue]• [/COLOR]Scraper Work
+[COLOR yellow]• Latest Changes[/COLOR] - (07-01-19)
+[COLOR blue]• [/COLOR]Cosmetic Fixes
+[COLOR blue]• [/COLOR][B][COLOR yellow]To achieve the best results using the torrent scrapers, go into Fuzzy Britches > Tools > ResolveURL: Settings > Universal Resolvers and scroll down the list for each provider you use. If there is an option for that provider that says[/COLOR][/B][B][COLOR red] "Cached torrent only"[/COLOR][/B], [B][COLOR yellow]make sure to turn it[/COLOR][/B][B][COLOR red] ON[/COLOR][/B][B][COLOR yellow]. No more Popups when scraping torrents![/COLOR][/B]
 
 Please give credit to all the devolopers that have and do contribute to this addon!
         </news>
