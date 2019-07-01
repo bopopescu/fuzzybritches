@@ -7,7 +7,7 @@ This repository is for the addons ported, modified, created, designed or hosted 
 
 • The Fuzzy Britches addon has been ported and patched together from various other Exodus type addons, including Covenant, Incursion, Numbers. Please give credit to their respective developers. <B>Make sure to read NEWS section for best results!</B>
 
-• The Kids Cove addon is a Jen type addon just for kids and include tons of old and new cartoons, anime and many old TV classic shows. Again, please give credit to their respective developers.
+• The Kids Cove addon is a Jen type addon just for kids and include tons of old and new cartoons, anime and many old TV classic shows. Again, please give credit the JEN developers.
 
 • PSMC Maintenance Tools - Features include: Auto delete of cache at start up (optional), notifies when packages and thumbs reach a set amount of wasted storage space (you can set and change sizes), cuts down on your devices read/writes on the ROM. Also has many Backup/Restore Options, Speed test, IP check and other features. Again, please give credit to their respective developers.
 
