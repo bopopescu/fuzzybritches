@@ -5,7 +5,7 @@ This repository is for the addons ported, modified, created, designed or hosted 
 • <B>Kids Cove</B> (Jen based)<BR>
 • <B>PSMC Maintenance</B> (Maintenance Program)
 
-• The Fuzzy Britches addon has been ported and patched together from various other Exodus type addons, including Covenant, Incursion, Numbers. Please give credit to their respective developers.
+• The Fuzzy Britches addon has been ported and patched together from various other Exodus type addons, including Covenant, Incursion, Numbers. Please give credit to their respective developers. <B>Make sure to read NEWS section for best results!</B>
 
 • The Kids Cove addon is a Jen type addon just for kids and include tons of old and new cartoons, anime and many old TV classic shows. Again, please give credit to their respective developers.
 
