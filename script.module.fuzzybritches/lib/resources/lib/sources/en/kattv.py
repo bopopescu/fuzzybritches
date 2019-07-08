@@ -1,18 +1,20 @@
 # -*- coding: utf-8 -*-
+#######################################################################
+# ----------------------------------------------------------------------------
+# "A BEER-WARE LICENSE"
+#  As long as you retain this notice, feel free to do whatever you
+# wish with this file. If we meet some day, and you think
+# this helped you in some way, you can buy me a beer. Since we most
+# likey will never meet, buy a stranger a beer. - The Papaw
+# ----------------------------------------------------------------------------
+#######################################################################
+
+# Addon Name: Fuzzy Britches
+# Addon id: script.module.fuzzybritches
+# Addon Provider: The Papaw
 
 '''
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+Included with the Fuzzy Britches Add-on
 '''
 
 import re,urlparse,urllib,base64
@@ -22,9 +24,10 @@ from resources.lib.modules import cleantitle,client,dom_parser2,cfscrape
 class source:
     def __init__(self):
         self.priority = 1
+        self.source = ['www', 'www1']
         self.language = ['en']
         self.domains = ['kat.tv']
-        self.base_link = 'http://www1.kat.tv'
+        self.base_link = 'http://kat.tv'
         self.search_link = '/search-movies/%s.html'
         self.scraper = cfscrape.create_scraper()
 

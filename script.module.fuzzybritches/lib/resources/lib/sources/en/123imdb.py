@@ -1,21 +1,20 @@
 # -*- coding: utf-8 -*-
 #######################################################################
 # ----------------------------------------------------------------------------
-# "THE BEER-WARE LICENSE" (Revision 42):
-# @shellc0de wrote this file.  As long as you retain this notice you
-# can do whatever you want with this stuff. If we meet some day, and you think
-# this stuff is worth it, you can buy me a beer in return. - Muad'Dib
+# "A BEER-WARE LICENSE"
+#  As long as you retain this notice, feel free to do whatever you
+# wish with this file. If we meet some day, and you think
+# this helped you in some way, you can buy me a beer. Since we most
+# likey will never meet, buy a stranger a beer. - The Papaw
 # ----------------------------------------------------------------------------
 #######################################################################
 
-# Addon Name: Atreides
-# Addon id: plugin.video.atreides
-# Addon Provider: House Atreides
+# Addon Name: Fuzzy Britches
+# Addon id: script.module.fuzzybritches
+# Addon Provider: The Papaw
 
 '''
-2019/5/21: Since spacemov.cc has a captcha on the main page, we will now scrape
-their sister site 123imdb. Also completely rewrote the script for better
-accuracy
+Included with the Fuzzy Britches Add-on
 '''
 
 import re
@@ -29,6 +28,7 @@ from resources.lib.modules import cleantitle, log_utils
 class source:
     def __init__(self):
         self.priority = 1
+        self.source = ['www']
         self.language = ['en']
         self.domains = ['123imdb.to']
         self.base_link = 'https://123imdb.to'

@@ -1,19 +1,20 @@
 # -*- coding: utf-8 -*-
 #######################################################################
 # ----------------------------------------------------------------------------
-# "THE BEER-WARE LICENSE" (Revision 42):
-#  As long as you retain this notice you
-# can do whatever you want with this stuff. If we meet some day, and you think
-# this stuff is worth it, you can buy me a beer in return. - Muad'Dib
+# "A BEER-WARE LICENSE"
+#  As long as you retain this notice, feel free to do whatever you
+# wish with this file. If we meet some day, and you think
+# this helped you in some way, you can buy me a beer. Since we most
+# likey will never meet, buy a stranger a beer. - The Papaw
 # ----------------------------------------------------------------------------
 #######################################################################
 
-# Addon Name: Atreides
-# Addon id: plugin.video.atreides
-# Addon Provider: House Atreides
+# Addon Name: Fuzzy Britches
+# Addon id: script.module.fuzzybritches
+# Addon Provider: The Papaw
 
 '''
-2019/4/17: fix by SC
+Included with the Fuzzy Britches Add-on
 '''
 
 import re
@@ -27,9 +28,10 @@ from resources.lib.modules import cfscrape, client, log_utils
 class source:
     def __init__(self):
         self.priority = 1
+        self.source = ['www']
         self.language = ['en']
-        self.domains = ['uwatchfree.sx']
-        self.base_link = 'https://www.uwatchfree.sx'
+        self.domains = ['uwatchfree.st', '2uwatchfree.live']
+        self.base_link = 'https://uwatchfree.st'
         self.search_link = '/?s=%s&submit=Search'
         self.scraper = cfscrape.create_scraper()
 

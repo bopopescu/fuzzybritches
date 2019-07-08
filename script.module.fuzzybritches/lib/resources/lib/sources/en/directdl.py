@@ -1,16 +1,21 @@
 # -*- coding: utf-8 -*-
 #######################################################################
 # ----------------------------------------------------------------------------
-# "THE BEER-WARE LICENSE" (Revision 42):
-#  As long as you retain this notice you
-# can do whatever you want with this stuff. If we meet some day, and you think
-# this stuff is worth it, you can buy me a beer in return. - Muad'Dib
+# "A BEER-WARE LICENSE"
+#  As long as you retain this notice, feel free to do whatever you
+# wish with this file. If we meet some day, and you think
+# this helped you in some way, you can buy me a beer. Since we most
+# likey will never meet, buy a stranger a beer. - The Papaw
 # ----------------------------------------------------------------------------
 #######################################################################
 
-# Addon Name: Atreides
-# Addon id: plugin.video.atreides
-# Addon Provider: House Atreides
+# Addon Name: Fuzzy Britches
+# Addon id: script.module.fuzzybritches
+# Addon Provider: The Papaw
+
+'''
+Included with the Fuzzy Britches Add-on
+'''
 
 import base64
 import json
@@ -25,9 +30,10 @@ from resources.lib.modules import cleantitle, client, debrid, log_utils
 class source:
     def __init__(self):
         self.priority = 1
+        self.source = ['www']
         self.language = ['en']
         self.domains = ['directdownload.tv']
-        self.base_link = 'https://directdownload.tv'
+        self.base_link = 'https://www.directdownload.tv'
         self.search_link = base64.b64decode('L2FwaT9rZXk9NEIwQkI4NjJGMjRDOEEyOSZrZXl3b3JkPQ==')
         self.b_link = 'aHR0cDovL2lwdjYuaWNlZmlsbXMuaW5mbw=='
         self.u_link = 'aHR0cDovL2lwdjYuaWNlZmlsbXMuaW5mby9tZW1iZXJzb25seS9jb21wb25lbnRzL2NvbV9pY2VwbGF5ZXIvdmlkZW8ucGhwP2g9Mzc0Jnc9NjMxJnZpZD0lcyZpbWc9'

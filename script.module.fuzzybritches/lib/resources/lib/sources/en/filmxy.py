@@ -1,21 +1,20 @@
 # -*- coding: utf-8 -*-
 #######################################################################
 # ----------------------------------------------------------------------------
-# "THE BEER-WARE LICENSE" (Revision 42):
-#  As long as you retain this notice you can do whatever you want with this
-# stuff. Just please ask before copying. If we meet some day, and you think
-# this stuff is worth it, you can buy me a beer in return. - Muad'Dib
+# "A BEER-WARE LICENSE"
+#  As long as you retain this notice, feel free to do whatever you
+# wish with this file. If we meet some day, and you think
+# this helped you in some way, you can buy me a beer. Since we most
+# likey will never meet, buy a stranger a beer. - The Papaw
 # ----------------------------------------------------------------------------
 #######################################################################
 
-# Addon Name: Atreides
-# Addon id: plugin.video.atreides
-# Addon Provider: House Atreides
+# Addon Name: Fuzzy Britches
+# Addon id: script.module.fuzzybritches
+# Addon Provider: The Papaw
 
 '''
-2019/5/24: Removed filter function, as its not needed anymore. Updated/tweaked regex
-to pull both iframes. Added some quality checking from source_utils.
-2019/6/12: Added cfscrape
+Included with the Fuzzy Britches Add-on
 '''
 
 import re
@@ -28,9 +27,10 @@ from resources.lib.modules import cleantitle, log_utils, source_utils, cfscrape
 class source:
     def __init__(self):
         self.priority = 1
+        self.source = ['www']
         self.language = ['en']
         self.domains = ['filmxy.me', 'filmxy.one', 'filmxy.ws']
-        self.base_link = 'https://www.filmxy.live'
+        self.base_link = 'https://filmxy.live'
         self.search_link = '/%s-%s'
         self.cfscraper = cfscrape.create_scraper()
 

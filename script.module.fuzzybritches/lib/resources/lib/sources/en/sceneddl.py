@@ -1,18 +1,20 @@
 # -*- coding: utf-8 -*-
+#######################################################################
+# ----------------------------------------------------------------------------
+# "A BEER-WARE LICENSE"
+#  As long as you retain this notice, feel free to do whatever you
+# wish with this file. If we meet some day, and you think
+# this helped you in some way, you can buy me a beer. Since we most
+# likey will never meet, buy a stranger a beer. - The Papaw
+# ----------------------------------------------------------------------------
+#######################################################################
+
+# Addon Name: Fuzzy Britches
+# Addon id: script.module.fuzzybritches
+# Addon Provider: The Papaw
 
 '''
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+Included with the Fuzzy Britches Add-on
 '''
 
 import re
@@ -29,9 +31,10 @@ from resources.lib.modules import source_utils
 class source:
     def __init__(self):
         self.priority = 1
+        self.source = ['www']
         self.language = ['en']
-        self.domain = 'sceneddl.online'
-        self.base_link = 'http://www.sceneddl.online'
+        self.domain = 'sceneddl.tk'
+        self.base_link = 'http://sceneddl.tk'
         self.search_link = '/?s=%s'
         self.scraper = cfscrape.create_scraper()
 

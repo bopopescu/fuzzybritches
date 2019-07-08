@@ -1,17 +1,21 @@
 # -*- coding: utf-8 -*-
 #######################################################################
 # ----------------------------------------------------------------------------
-# "THE BEER-WARE LICENSE" (Revision 42):
-#  As long as you retain this notice you
-# can do whatever you want with this stuff. If we meet some day, and you think
-# this stuff is worth it, you can buy me a beer in return. - Muad'Dib
+# "A BEER-WARE LICENSE"
+#  As long as you retain this notice, feel free to do whatever you
+# wish with this file. If we meet some day, and you think
+# this helped you in some way, you can buy me a beer. Since we most
+# likey will never meet, buy a stranger a beer. - The Papaw
 # ----------------------------------------------------------------------------
 #######################################################################
 
-# Addon Name: Atreides
-# Addon id: plugin.video.atreides
-# Addon Provider: House Atreides
+# Addon Name: Fuzzy Britches
+# Addon id: script.module.fuzzybritches
+# Addon Provider: The Papaw
 
+'''
+Included with the Fuzzy Britches Add-on
+'''
 
 import re
 import traceback
@@ -24,9 +28,10 @@ from resources.lib.modules import cleantitle, client, debrid, log_utils, source_
 class source:
     def __init__(self):
         self.priority = 1
+        self.source = ['www']
         self.language = ['en']
-        self.domains = ['300mbfilms.co']
-        self.base_link = 'https://www.300mbfilms.co'
+        self.domains = ['300mbfilms.io']
+        self.base_link = 'https://300mbfilms.io'
         self.search_link = '/?s=%s'
 
     def movie(self, imdb, title, localtitle, aliases, year):
