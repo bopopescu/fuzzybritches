@@ -1,5 +1,5 @@
 # Fuzzy Britches Repository
-This repository is for the addons ported, modified, created, designed or hosted by "The Papaw". They include:
+This repository is for the addons ported, modified, created, designed or hosted by "The Papaw". They are for learning and educational purposes only. They include:
 
 • <B>Fuzzy Britches</B> (Exodus type)<BR>
 • <B>Kids Cove</B> (Jen based)<BR>
