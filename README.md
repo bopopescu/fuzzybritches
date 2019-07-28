@@ -4,7 +4,7 @@ All items hosted here are for learning and educational purposes only. They inclu
 
 • <B>Fuzzy Britches</B> (Exodus type)<BR>
 • <B>Kids Cove</B> (Jen based)<BR>
-• <B>PSMC Maintenance</B> (Maintenance Program)
+• <B>PSMC Maintenance</B> (Maintenance Program)<BR>
 • <B>Various Skins - see below</B> (Usually forked from the Aeon-nox Sylvo v7.0.1 skin)<BR>
 
 • The Fuzzy Britches addon has been ported and patched together from various other Exodus type addons, including Covenant, Incursion, Numbers. Please give credit to their respective developers. <B>Make sure to read NEWS section for best results!</B>
