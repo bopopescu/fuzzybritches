@@ -24,8 +24,6 @@ These addons are 3rd party addons, so please do not seek help from Kodi, the Kod
 
 If you have issues, please post them here. All items are still being developed and should only be used for testing purposes.
 
-Please do NOT post, host or link too Youtube, social media or any other web sites without gaining approval first.
-
   
 To Install:
 1. Download the repository. <a href="https://github.com/ThePapaw/fuzzybritches/blob/master/_zips/repository.fuzzybritches/repository.fuzzybritches-1.0.10.zip?raw=true">CLICK HERE</a>
