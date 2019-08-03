@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
-#######################################################################
-# ----------------------------------------------------------------------------
-# "A BEER-WARE LICENSE"
-#  As long as you retain this notice, feel free to do whatever you
-# wish with this file. If we meet some day, and you think
-# this helped you in some way, you can buy me a beer. Since we most
-# likey will never meet, buy a stranger a beer. - The Papaw
-# ----------------------------------------------------------------------------
-#######################################################################
+###############################################################################
+#                           "A BEER-WARE LICENSE"                             #
+# ----------------------------------------------------------------------------#
+# Feel free to do whatever you wish with this file. Since we most likey will  #
+# never meet, buy a stranger a beer. Give credit to ALL named, unnamed, past, #
+# present and future dev's of this & files like this. -Share the Knowledge!   #
+###############################################################################
 
 # Addon Name: Fuzzy Britches
 # Addon id: script.module.fuzzybritches
@@ -31,10 +29,9 @@ from resources.lib.modules import source_utils
 class source:
     def __init__(self):
         self.priority = 1
-        self.source = ['www']
         self.language = ['en']
-        self.domain = 'sceneddl.tk'
-        self.base_link = 'http://sceneddl.tk'
+        self.domain = 'sceneddl.online'
+        self.base_link = 'http://www.sceneddl.online'
         self.search_link = '/?s=%s'
         self.scraper = cfscrape.create_scraper()
 

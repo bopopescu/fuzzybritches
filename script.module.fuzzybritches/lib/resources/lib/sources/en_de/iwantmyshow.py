@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
-#######################################################################
-# ----------------------------------------------------------------------------
-# "A BEER-WARE LICENSE"
-#  As long as you retain this notice, feel free to do whatever you
-# wish with this file. If we meet some day, and you think
-# this helped you in some way, you can buy me a beer. Since we most
-# likey will never meet, buy a stranger a beer. - The Papaw
-# ----------------------------------------------------------------------------
-#######################################################################
+###############################################################################
+#                           "A BEER-WARE LICENSE"                             #
+# ----------------------------------------------------------------------------#
+# Feel free to do whatever you wish with this file. Since we most likey will  #
+# never meet, buy a stranger a beer. Give credit to ALL named, unnamed, past, #
+# present and future dev's of this & files like this. -Share the Knowledge!   #
+###############################################################################
 
 # Addon Name: Fuzzy Britches
 # Addon id: script.module.fuzzybritches
@@ -31,7 +29,7 @@ class source:
         self.language = ['en']
         self.domains = ['myvideolinks.net', 'iwantmyshow.tk']
         self.base_link = 'http://myvideolinks.net'
-        self.search_link = 'wp/?s=%s'
+        self.search_link = 'mv1/?s=%s'
 
     def movie(self, imdb, title, localtitle, aliases, year):
         try:

@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
-#######################################################################
-# ----------------------------------------------------------------------------
-# "A BEER-WARE LICENSE"
-#  As long as you retain this notice, feel free to do whatever you
-# wish with this file. If we meet some day, and you think
-# this helped you in some way, you can buy me a beer. Since we most
-# likey will never meet, buy a stranger a beer. - The Papaw
-# ----------------------------------------------------------------------------
-#######################################################################
+###############################################################################
+#                           "A BEER-WARE LICENSE"                             #
+# ----------------------------------------------------------------------------#
+# Feel free to do whatever you wish with this file. Since we most likey will  #
+# never meet, buy a stranger a beer. Give credit to ALL named, unnamed, past, #
+# present and future dev's of this & files like this. -Share the Knowledge!   #
+###############################################################################
 
 # Addon Name: Fuzzy Britches
 # Addon id: script.module.fuzzybritches
@@ -22,7 +20,13 @@ import urllib
 import urlparse
 import requests
 
-from resources.lib.modules import cleantitle, client, debrid, dom_parser2, log_utils, source_utils, workers
+from resources.lib.modules import cleantitle
+from resources.lib.modules import workers
+from resources.lib.modules import source_utils
+from resources.lib.modules import log_utils
+from resources.lib.modules import dom_parser2
+from resources.lib.modules import debrid
+from resources.lib.modules import client
 
 
 class source:
@@ -80,15 +84,17 @@ class source:
 
             query = cleantitle.geturl(query)
             url = urlparse.urljoin(self.base_link, query)
+
+
             shell = requests.Session()
 
             headers = {
                 'Referer': url,
                 'User-Agent':
                 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0'}
-            r = scraper.get(url, headers=headers)
+            r = shell.get(url, headers=headers)
             r = r.headers['Location']
-            r = scraper.get(r).content
+            r = shell.get(r).content
             posts = dom_parser2.parse_dom(r, 'li', {'class': re.compile('.+?'), 'id': re.compile('comment-.+?')})
             self.hostDict = hostDict + hostprDict
             threads = []
@@ -117,6 +123,7 @@ class source:
                 pass
             info = ' | '.join(info)
             for url in links:
+
                 if 'youtube' in url:
                     continue
                 if any(x in url for x in ['.rar.', '.zip.', '.iso.']) or any(
