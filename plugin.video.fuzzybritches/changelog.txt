@@ -5,7 +5,7 @@
 
  
 [COLOR deepskyblue]********************************************************************************************[/COLOR]
-[B][COLOR limegreen]v3.0.0.0 (07-31-19)[/COLOR][/B]
+[B][COLOR limegreen]v3.0.0.0 (08-03-19)[/COLOR][/B]
 [B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
 [B][I][COLOR red]• You will need to re-authorize Trakt after this update[/COLOR][/I][/B]
 
