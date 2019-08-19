@@ -5,6 +5,15 @@
 
  
 [COLOR deepskyblue]********************************************************************************************[/COLOR]
+[B][COLOR limegreen]v3.0.3.0 (08-19-19)[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Scraper Work
+
+[B][COLOR limegreen]v3.0.2.0 (08-08-19)[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
+
+[B][COLOR limegreen]v3.0.1.0 (08-04-19)[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
+
 [B][COLOR limegreen]v3.0.0.0 (08-03-19)[/COLOR][/B]
 [B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic Fixes
 [B][I][COLOR red]• You will need to re-authorize Trakt after this update[/COLOR][/I][/B]
