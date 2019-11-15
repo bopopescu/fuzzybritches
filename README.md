@@ -28,7 +28,7 @@ Most of them now include <B>Home Screen Animation</B> (can be toggled off), addi
 • <B>PSMC's Scooby-Doo Skin</B> - ***NEW Design** (includes animations & GUI sounds). <BR>
 • <B>PSMC's Toy Story Skin</B> - ***NEW Design** (includes animations & GUI sounds). <BR>
 
-PSMC, the Addons and Skins hosted here are considered 3rd party, so please do not seek help from Kodi, the Kodi forums, etc..
+The Addons and Skins hosted here are considered 3rd party, so please do not seek help from Kodi, the Kodi forums, etc.. If you would like to try PSMC, it can be installed by adding the PSMC Repo from 'Add-on repositories' section of the Fuzzy Britches Repo.
 
 If you have issues, please post them here. All items are still being developed and should only be used for testing purposes.
 
