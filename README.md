@@ -11,18 +11,24 @@ All items hosted here are for learning and educational purposes only. They inclu
 
 • The Kids Cove addon is a Jen type addon just for kids and include tons of old and new cartoons, anime and many old TV classic shows. Again, please give credit the JEN developers.
 
-• PSMC Maintenance Tools - Features include: Auto delete of cache at start up (optional), notifies when packages and thumbs reach a set amount of wasted storage space (you can set and change sizes), cuts down on your devices read/writes on the ROM. Also has many Backup/Restore Options, Speed test, IP check and other features. Again, please give credit to their respective developers.
+• <B>PSMC Maintenance Tools</B> (Maintenance Program)<BR>
+Features include: Auto delete of cache at start up (optional), notifies when packages and thumbs reach a set amount of wasted storage space (you can set and change sizes), cuts down on your devices read/writes on the ROM. Also has many Backup/Restore Options, Speed test, IP check and other features. Again, please give credit to their respective developers.
 
-These addons have been tested with Kodi v18.2 and appear to be working fine unless otherwise stated.
+• <B>The SKINS</B> have been themed and modded for use with PSMC using the AeonNox SiLVO skin unless otherwise stated. They will work with Kodi and other Kodi forks. All the PSMC skins have been COMPLETELY redesigned and updated using the AeonNox SiLVO (v7.9.4).
 
-The SKINS here were themed and/or modded for using with PSMC 18. They work with Kodi 18 as well. All were themed from Aeon Nox SiLVO (v7.0.1) unless otherwise stated. They include:
+Most of them now include <B>Home Screen Animation</B> (can be toggled off), additional Falling Seasons, GUI Sounds and other various changes.  (If you wish to use the included <B>GUI Sounds</B> for a particular skin, they are installed with the skin, but you will need to Enable them in the media player's system settings) The PSMC skins include:
 
-• <B>PSMC's Silvo Skin</B> - General Aeon Nox SiLVO skin themed for PSMC/Kodi 18<BR>
-• <B>PSMC's Spiderman</B> - Spiderman Theme modded and brought up-to-date for PSMC/Kodi 18<BR>
-• <B>PSMC's Man of Steel</B> - Man of Steel Theme modded and brought up-to-date for PSMC/Kodi 18<BR>
-• <B>PSMC's Super Mario Galaxy</B> - Super Mario Galaxy Theme modded and brought up-to-date for PSMC/Kodi 18 (If you wish to use the included <B>MARIO GUI SOUNDS</B>, you need to enable them in the system settings!)
+• <B>PSMC's Silvo Skin</B> - A general Aeon Nox SiLVO skin themed for PSMC. <BR>
+• <B>PSMC's Spiderman Skin</B> - Updated and redesigned (includes animations & GUI sounds). <BR>
+• <B>PSMC's Man of Steel Skin</B> - Updated and redesigned (includes animations & GUI sounds)<BR>
+• <B>PSMC's Super Mario Galaxy Skin</B> - Updated and redesigned (includes animations & GUI sounds). <BR>
 
-These addons are 3rd party addons, so please do not seek help from Kodi, the Kodi forums, etc..
+*Newly Added Skins:* <BR>
+• <B>PSMC's Batman Skin</B> - ***NEW Design** (includes animations & GUI sounds). <BR>
+• <B>PSMC's Scooby-Doo Skin</B> - ***NEW Design** (includes animations & GUI sounds). <BR>
+• <B>PSMC's Toy Story Skin</B> - ***NEW Design** (includes animations & GUI sounds). <BR>
+
+PSMC, the Addons and Skins hosted here are considered 3rd party, so please do not seek help from Kodi, the Kodi forums, etc..
 
 If you have issues, please post them here. All items are still being developed and should only be used for testing purposes.
 
