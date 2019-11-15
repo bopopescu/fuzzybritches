@@ -280,6 +280,10 @@ msgctxt "#31241"
 msgid "LowList"
 msgstr "Llista Baixa"
 
+msgctxt "#31243"
+msgid "Posters"
+msgstr "Cartells"
+
 msgctxt "#31245"
 msgid "Wall"
 msgstr "Paret"
@@ -291,6 +295,10 @@ msgstr "InfoWall"
 msgctxt "#31248"
 msgid "BannerPlex"
 msgstr "Bàner de Plex"
+
+msgctxt "#31253"
+msgid "Banners"
+msgstr "Banners"
 
 msgctxt "#31277"
 msgid "Sort by"
@@ -335,6 +343,14 @@ msgstr "Recomanat"
 msgctxt "#31374"
 msgid "Latest"
 msgstr "Nou "
+
+msgctxt "#31375"
+msgid "Video OSD"
+msgstr "OSD de vídeo"
+
+msgctxt "#31376"
+msgid "Music OSD"
+msgstr "OSD de música"
 
 msgctxt "#31390"
 msgid "Skin default"
@@ -384,13 +400,13 @@ msgctxt "#31505"
 msgid "Delete Group"
 msgstr "Elimina el grup"
 
-msgctxt "#31506"
-msgid "Available[CR]Groups"
-msgstr "Grups[CR]disponibles"
-
 msgctxt "#31511"
 msgid "Channel Options"
 msgstr "Opcions del canal"
+
+msgctxt "#31536"
+msgid "Recent recordings"
+msgstr "Enregistraments recents"
 
 msgctxt "#31604"
 msgid "Information"

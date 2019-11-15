@@ -144,6 +144,14 @@ msgctxt "#31374"
 msgid "Latest"
 msgstr "ዘመናዊ"
 
+msgctxt "#31375"
+msgid "Video OSD"
+msgstr "ቪዲዮ OSD"
+
+msgctxt "#31376"
+msgid "Music OSD"
+msgstr "ሙዚቃ OSD"
+
 msgctxt "#31390"
 msgid "Skin default"
 msgstr "መደበኛ "
@@ -151,6 +159,10 @@ msgstr "መደበኛ "
 msgctxt "#31413"
 msgid "Local subtitle available"
 msgstr "የ አካባቢ ንዑስ አርእስት ዝግጁ ነው"
+
+msgctxt "#31491"
+msgid "Muted"
+msgstr "ተቀንሷል"
 
 msgctxt "#31502"
 msgid "Live TV"
@@ -167,10 +179,6 @@ msgstr "ቡድን እንደገና መሰየሚያ"
 msgctxt "#31505"
 msgid "Delete Group"
 msgstr "ቡድን ማጥፊያ"
-
-msgctxt "#31506"
-msgid "Available[CR]Groups"
-msgstr "ዝግጁ[CR]ቡድኖች"
 
 msgctxt "#31511"
 msgid "Channel Options"

@@ -160,9 +160,17 @@ msgctxt "#31230"
 msgid "Panel"
 msgstr "Podokno"
 
+msgctxt "#31243"
+msgid "Posters"
+msgstr "Plakat"
+
 msgctxt "#31245"
 msgid "Wall"
 msgstr "Ikone"
+
+msgctxt "#31253"
+msgid "Banners"
+msgstr "Coverflow"
 
 msgctxt "#31301"
 msgid "Last Updated"
@@ -204,6 +212,14 @@ msgctxt "#31374"
 msgid "Latest"
 msgstr "Najnovejši"
 
+msgctxt "#31375"
+msgid "Video OSD"
+msgstr "Video OSD"
+
+msgctxt "#31376"
+msgid "Music OSD"
+msgstr "Glasbeni OSD"
+
 msgctxt "#31390"
 msgid "Skin default"
 msgstr "Privzeto"
@@ -231,10 +247,6 @@ msgstr "Preimenuj skupino"
 msgctxt "#31505"
 msgid "Delete Group"
 msgstr "Izbriši skupino"
-
-msgctxt "#31506"
-msgid "Available[CR]Groups"
-msgstr "Skupine[CR]na voljo"
 
 msgctxt "#31511"
 msgid "Channel Options"

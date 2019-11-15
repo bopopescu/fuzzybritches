@@ -308,6 +308,10 @@ msgctxt "#31205"
 msgid "Lyrics Source"
 msgstr "Nguồn lyric"
 
+msgctxt "#31243"
+msgid "Posters"
+msgstr "Poster"
+
 msgctxt "#31245"
 msgid "Wall"
 msgstr "Biểu tượng"
@@ -388,6 +392,14 @@ msgctxt "#31374"
 msgid "Latest"
 msgstr "Mới nhất"
 
+msgctxt "#31375"
+msgid "Video OSD"
+msgstr "Bảng điều khiển Video"
+
+msgctxt "#31376"
+msgid "Music OSD"
+msgstr "Bảng điều khiển Nhạc"
+
 msgctxt "#31390"
 msgid "Skin default"
 msgstr "Skin mặc định"
@@ -411,10 +423,6 @@ msgstr "Đổi tên nhóm"
 msgctxt "#31505"
 msgid "Delete Group"
 msgstr "Xoá nhóm"
-
-msgctxt "#31506"
-msgid "Available[CR]Groups"
-msgstr "Đang có[CR]Các nhóm"
 
 msgctxt "#31511"
 msgid "Channel Options"

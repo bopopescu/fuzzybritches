@@ -258,7 +258,7 @@ msgstr "Artiestendiavoorstelling"
 
 msgctxt "#31060"
 msgid "This file is stacked, select the part you want to play from."
-msgstr "Dit bestand is gestapeld, selecteer het deel dat u wilt afspelen."
+msgstr "Dit bestand is gestapeld, selecteer het deel dat je wilt afspelen."
 
 msgctxt "#31061"
 msgid "Total addons / Favourites statistics"
@@ -469,8 +469,8 @@ msgid "Movies written by"
 msgstr "Flims geschreven door"
 
 msgctxt "#31114"
-msgid "More movies from"
-msgstr "Meer films van"
+msgid "More from"
+msgstr "Meer van"
 
 msgctxt "#31115"
 msgid "Similar TV shows"
@@ -483,6 +483,10 @@ msgstr "Wissel fanart"
 msgctxt "#31117"
 msgid "Fallback"
 msgstr "Terugval"
+
+msgctxt "#31118"
+msgid "Cache movie extrafanart"
+msgstr "Cache film extrafanart"
 
 msgctxt "#31119"
 msgid "Show the movies from this director in your library or view online information on this director on TMDb?"
@@ -512,6 +516,10 @@ msgctxt "#31125"
 msgid "Show Background \"Now Playing\" Visualisation"
 msgstr "Toon Achtergrond \"Huidige Onderdeel\" voor visualisatie"
 
+msgctxt "#31127"
+msgid "Enable Extended Info integration"
+msgstr "Activeer uitgebreide informatie integratie"
+
 msgctxt "#31128"
 msgid "Channels View"
 msgstr "Kanalen Weergave"
@@ -525,8 +533,8 @@ msgid "Use \"Enigma2-style\" channel OSD"
 msgstr "Gebruik \"Enigma2-style\" kanaal OSD"
 
 msgctxt "#31131"
-msgid "EPG Timeline View"
-msgstr "EPG Tijdlijn Weergave"
+msgid "Guide Timeline View"
+msgstr "Gids tijdlijn weergave"
 
 msgctxt "#31132"
 msgid "Tuner:"
@@ -608,6 +616,10 @@ msgctxt "#31153"
 msgid "Disable views"
 msgstr "Deactiveer weergaven"
 
+msgctxt "#31154"
+msgid "Show Artist Slideshow when playing music"
+msgstr "Toon artiest diavoorstelling tijdens afspelen muziek"
+
 msgctxt "#31155"
 msgid "Widgets"
 msgstr "Widgets"
@@ -623,6 +635,10 @@ msgstr "Submenu altijd zichtbaar"
 msgctxt "#31158"
 msgid "Disable the Search icon "
 msgstr "Deactiveer het zoekicoon"
+
+msgctxt "#31159"
+msgid "Event log"
+msgstr "Eventlog"
 
 msgctxt "#31160"
 msgid "Extended"
@@ -651,6 +667,10 @@ msgstr "Activeer omschrijving voor een filmwaardering"
 msgctxt "#31167"
 msgid "This setting displays a reason for a movies rating. You need to use a script like Rating Update to add these values (prefix must be Rated  including a space after Rated)"
 msgstr "Deze instelling geeft een reden voor een filmwaardering weer. Een script zoals \"Rating Update\" is noodzakelijk om deze waarden toe te voegen (prefix moet \"Rated\" zijn, inclusief een spatie achter \"Rated\")"
+
+msgctxt "#31169"
+msgid "This setting hides the Search icon on the home screen."
+msgstr "Deze instelling verbergt het Zoek icoon op het startscherm."
 
 msgctxt "#31176"
 msgid "Trending Movies"
@@ -762,7 +782,7 @@ msgstr "Momenteel uitgezonden TV"
 
 msgctxt "#31215"
 msgid "TV Airing Today"
-msgstr "TV Uitzending Vandaag"
+msgstr "TV-uitzendingen vandaag"
 
 msgctxt "#31221"
 msgid "Big"
@@ -820,6 +840,10 @@ msgctxt "#31242"
 msgid "BigList"
 msgstr "Grote lijst"
 
+msgctxt "#31243"
+msgid "Posters"
+msgstr "Posters"
+
 msgctxt "#31245"
 msgid "Wall"
 msgstr "Muur"
@@ -835,6 +859,10 @@ msgstr "BannerPlex"
 msgctxt "#31251"
 msgid "Gallery"
 msgstr "Gallerij"
+
+msgctxt "#31253"
+msgid "Banners"
+msgstr "Banners"
 
 msgctxt "#31255"
 msgid "Mediaflags"
@@ -922,11 +950,11 @@ msgstr "Uitgezonden"
 
 msgctxt "#31328"
 msgid "Recently Added"
-msgstr "Onlangs Toegevoegd"
+msgstr "Onlangs toegevoegd"
 
 msgctxt "#31331"
 msgid "Installed"
-msgstr "Geinstalleerd"
+msgstr "Geïnstalleerd"
 
 msgctxt "#31334"
 msgid "Required"
@@ -956,9 +984,17 @@ msgctxt "#31374"
 msgid "Latest"
 msgstr "Nieuwste"
 
+msgctxt "#31375"
+msgid "Video OSD"
+msgstr "Video-OSD"
+
+msgctxt "#31376"
+msgid "Music OSD"
+msgstr "Muziek-OSD"
+
 msgctxt "#31390"
 msgid "Skin default"
-msgstr "Standaard Skin"
+msgstr "Standaardskin"
 
 msgctxt "#31391"
 msgid "Arial"
@@ -972,17 +1008,9 @@ msgctxt "#31397"
 msgid "Custom Widget"
 msgstr "Aangepaste widget"
 
-msgctxt "#31400"
-msgid "[B]CONFIGURE INTERFACE SETTINGS[/B][CR]Change the skin · Set language and region · Setup remote controls[CR]Set up a screensaver · Setup master lock"
-msgstr "[B]INSTELLINGEN UITERLIJK CONFIGUREREN[/B][CR]Wijzig skin · Stel taal en regio in · instellen afstand bedieningen[CR]Stel een schermbeveiliging in · Configureer vergrendelopties"
-
 msgctxt "#31403"
 msgid "Reset skin settings"
 msgstr "Herstel skininstellingen"
-
-msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR]Setup and calibrate displays · Configure audio output[CR]Set power saving options · Enable debugging"
-msgstr "[B]SYSTEEMINSTELLINGEN CONFIGUREREN[/B][CR]Configureer en kalibreer schermen · Configureer audiouitgang[CR]Confugureer energiebeheeropties · Activeer  debugging"
 
 msgctxt "#31410"
 msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR]Setup control of Kodi via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
@@ -998,7 +1026,7 @@ msgstr "Lokale ondertiteling beschikbaar"
 
 msgctxt "#31421"
 msgid "Select your Kodi user profile[CR]to login and continue"
-msgstr "Selecteer uw Kodi gebruikersprofiel[CR]om in te loggen"
+msgstr "Kies je Kodi-gebruikersprofiel[CR]om in te loggen"
 
 msgctxt "#31426"
 msgid "Enter text here..."
@@ -1016,13 +1044,17 @@ msgctxt "#31458"
 msgid "TheMovieDB"
 msgstr "TheMovieDB"
 
+msgctxt "#31491"
+msgid "Muted"
+msgstr "Muted"
+
 msgctxt "#31501"
 msgid "Channel group"
 msgstr "Zendergroep"
 
 msgctxt "#31502"
 msgid "Live TV"
-msgstr "Live Televisie"
+msgstr "Live-televisie"
 
 msgctxt "#31503"
 msgid "Add Group"
@@ -1036,13 +1068,17 @@ msgctxt "#31505"
 msgid "Delete Group"
 msgstr "Groep Verwijderen"
 
-msgctxt "#31506"
-msgid "Available[CR]Groups"
-msgstr "Beschikbare[CR]Groepen"
-
 msgctxt "#31511"
 msgid "Channel Options"
 msgstr "Zenderopties"
+
+msgctxt "#31533"
+msgid "Unwatched movies"
+msgstr "Onbekeken films"
+
+msgctxt "#31536"
+msgid "Recent recordings"
+msgstr "Recente opnamen"
 
 msgctxt "#31603"
 msgid "Aeon Nox main menu navigation style"
@@ -1066,7 +1102,7 @@ msgstr "HD/SD/3D indicatoren"
 
 msgctxt "#31610"
 msgid "Small Shift"
-msgstr "Kleine Shift"
+msgstr "Kleine shift"
 
 msgctxt "#31621"
 msgid "Live TV & Weather"
@@ -1090,7 +1126,7 @@ msgstr "Kies een widget om weer te geven voor dit hoofdmenu item"
 
 msgctxt "#31701"
 msgid "Widget style"
-msgstr "Widget stijl"
+msgstr "Widgetstijl"
 
 msgctxt "#31706"
 msgid "Art"
@@ -1110,7 +1146,7 @@ msgstr "Paneel"
 
 msgctxt "#31732"
 msgid "In progress movies"
-msgstr "Afspelenden films"
+msgstr "Afspelende films"
 
 msgctxt "#31733"
 msgid "In progress episodes"
@@ -1126,7 +1162,7 @@ msgstr "Video add-ons"
 
 msgctxt "#31801"
 msgid "Audio addons"
-msgstr "Audio add-ons"
+msgstr "Muziek add-ons"
 
 msgctxt "#31802"
 msgid "Video addons / Audio addons"
@@ -1216,14 +1252,6 @@ msgctxt "#31924"
 msgid "This enables custom genre backgrounds when browsing through the musiclibrary's genre node. Filenames should match the genre label. Extension must be .jpg."
 msgstr "Dit staat aangepaste genre-achtergronden toe wanneer de muziekbibliotheek doorgebladerd wordt in de genremodus. bestandsnamen moeten overeenkomen met het genrelabel. Extensie moet .jpg zijn."
 
-msgctxt "#31925"
-msgid "Pick one of the preset backgrounds or set your own images as the menu items background."
-msgstr "Kies een standaardachtergrond of stel je eigen afbeeldingen in als achtergrond voor menu-items."
-
-msgctxt "#31926"
-msgid "Select add-ons, playlists or favourites. Choose 'Custom' for any of Kodi's built-in functions. (http://kodi.wiki/?title=List_of_Built_In_Functions)"
-msgstr "Selecteer add-ons, afspeellijsten of favorieten. Kies 'aanpassen' voor elke van Kodi's ingebouwde functies. (http://kodi.wiki/?title=List_of_Built_In_Functions)"
-
 msgctxt "#31927"
 msgid "Resets all above values to their defaults."
 msgstr "Herstelt van alle bovengenoemde waarden de standaardwaarde."
@@ -1274,7 +1302,7 @@ msgstr "Kioskmodus"
 
 msgctxt "#31943"
 msgid "Watched status indicator"
-msgstr "Bekeken status indicator"
+msgstr "Bekekenstatus-indicator"
 
 msgctxt "#31945"
 msgid "This toggles the layout of the List view. Default is a 7 item layout with extended info, \"Slim List\" is a 14 item, more basic layout"
@@ -1338,7 +1366,7 @@ msgstr "Waardeer op Trakt"
 
 msgctxt "#31973"
 msgid "Mod delay"
-msgstr "Mod vertraging"
+msgstr "Mod-vertraging"
 
 msgctxt "#31975"
 msgid "Use colored icons and mediaflags"

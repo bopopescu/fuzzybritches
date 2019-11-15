@@ -412,6 +412,10 @@ msgctxt "#31251"
 msgid "Gallery"
 msgstr "Galerija"
 
+msgctxt "#31253"
+msgid "Banners"
+msgstr "Prekriven"
+
 msgctxt "#31277"
 msgid "Sort by"
 msgstr "Složi po"
@@ -455,6 +459,14 @@ msgstr "Nedavno dodato"
 msgctxt "#31335"
 msgid "Recommended"
 msgstr "Preporučeno"
+
+msgctxt "#31375"
+msgid "Video OSD"
+msgstr "Video OSD"
+
+msgctxt "#31376"
+msgid "Music OSD"
+msgstr "Muzički OSD"
 
 msgctxt "#31390"
 msgid "Skin default"
@@ -504,13 +516,13 @@ msgctxt "#31505"
 msgid "Delete Group"
 msgstr "Обриши групу"
 
-msgctxt "#31506"
-msgid "Available[CR]Groups"
-msgstr "Доступне[CR]групе"
-
 msgctxt "#31511"
 msgid "Channel Options"
 msgstr "Opcije kanala"
+
+msgctxt "#31533"
+msgid "Unwatched movies"
+msgstr "Neodgledani filmovi"
 
 msgctxt "#31606"
 msgid "Logo"
@@ -567,14 +579,6 @@ msgstr "Stil navigacije za horizontalne spiskove"
 msgctxt "#31917"
 msgid "When enabled text scrolls automatically. When disabled manual scrolling is required. Note that not every textbox has a manual button."
 msgstr "Kada je omogućeno tekst se pomera automatski. Kada je onemogućeno potrebno je ručno pomeranje. Primetite da nemaju sve kutije za tekst ručni taster."
-
-msgctxt "#31925"
-msgid "Pick one of the preset backgrounds or set your own images as the menu items background."
-msgstr "Izaberite jednu od unapred zadatih pozadina ili postavite svoju sopstvenu sliku kao pozadinu stavki menija."
-
-msgctxt "#31926"
-msgid "Select add-ons, playlists or favourites. Choose 'Custom' for any of Kodi's built-in functions. (http://kodi.wiki/?title=List_of_Built_In_Functions)"
-msgstr "Odaberite dodatne programe, liste za reprodukciju ili omiljeno. Izaberite 'Prilagođeno' za bilo koju od Kodi ugrađenih funkcija. (http://kodi.wiki/?title=List_of_Built_In_Functions)"
 
 msgctxt "#31927"
 msgid "Resets all above values to their defaults."
