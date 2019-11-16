@@ -16,7 +16,7 @@ Included with the Fuzzy Britches Add-on
 '''
 
 import re
-from resources.lib.modules import client,cleantitle,source_utils, cfscrape
+from resources.lib.modules import client,cleantitle,source_utils
 
 
 class source:
@@ -26,7 +26,6 @@ class source:
         self.domains = ['deepmovie.ch']
         self.base_link = 'https://www.deepmovie.ch'
         self.search_link = '/%s/'
-        self.scraper = cfscrape.create_scraper()
 
 
     def movie(self, imdb, title, localtitle, aliases, year):
@@ -40,7 +39,7 @@ class source:
     def sources(self, url, hostDict, hostprDict):
         try:
             sources = []
-            r = self.scraper.get(url).content
+            r = client.request(url)
             try:
                 qual = re.compile('class="quality">(.+?)<').findall(r)
                 for i in qual:

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-
-'''
-    Fuzzy Britches Add-on
+"""
+    Included with the Fuzzy Britches II Add-on
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -15,8 +14,7 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-'''
-
+"""
 import ast
 import hashlib
 import re
@@ -32,7 +30,7 @@ except ImportError:
 This module is used to get/set cache for every action done in the system
 """
 
-cache_table = 'cache'
+cache_table = "cache"
 
 
 def get(function, duration, *args):
@@ -48,8 +46,8 @@ def get(function, duration, *args):
         key = _hash_function(function, args)
         cache_result = cache_get(key)
         if cache_result:
-            if _is_cache_valid(cache_result['date'], duration):
-                return ast.literal_eval(cache_result['value'].encode('utf-8'))
+            if _is_cache_valid(cache_result["date"], duration):
+                return ast.literal_eval(cache_result["value"].encode("utf-8"))
 
         fresh_result = repr(function(*args))
         if not fresh_result:
@@ -59,7 +57,7 @@ def get(function, duration, *args):
             return None
 
         cache_insert(key, fresh_result)
-        return ast.literal_eval(fresh_result.encode('utf-8'))
+        return ast.literal_eval(fresh_result.encode("utf-8"))
     except Exception:
         return None
 
@@ -68,9 +66,82 @@ def timeout(function, *args):
     try:
         key = _hash_function(function, args)
         result = cache_get(key)
-        return int(result['date'])
+        return int(result["date"])
     except Exception:
         return None
+
+
+def bennu_download_get(function, timeout, *args, **table):
+    try:
+        response = None
+
+        f = repr(function)
+        f = re.sub(".+\smethod\s|.+function\s|\sat\s.+|\sof\s.+", "", f)
+
+        a = hashlib.md5()
+        for i in args:
+            a.update(str(i))
+        a = str(a.hexdigest())
+    except:
+        pass
+
+    try:
+        table = table["table"]
+    except:
+        table = "rel_list"
+
+    try:
+        control.makeFile(control.dataPath)
+        dbcon = db.connect(control.cacheFile)
+        dbcur = dbcon.cursor()
+        dbcur.execute(
+            "SELECT * FROM %s WHERE func = '%s' AND args = '%s'" % (table, f, a)
+        )
+        match = dbcur.fetchone()
+
+        response = eval(match[2].encode("utf-8"))
+
+        t1 = int(match[3])
+        t2 = int(time.time())
+        update = (abs(t2 - t1) / 3600) >= int(timeout)
+        if update == False:
+            return response
+    except:
+        pass
+
+    try:
+        r = function(*args)
+        if (r == None or r == []) and not response == None:
+            return response
+        elif r == None or r == []:
+            return r
+    except:
+        return
+
+    try:
+        r = repr(r)
+        t = int(time.time())
+        dbcur.execute(
+            "CREATE TABLE IF NOT EXISTS %s ("
+            "func TEXT, "
+            "args TEXT, "
+            "response TEXT, "
+            "added TEXT, "
+            "UNIQUE(func, args)"
+            ");" % table
+        )
+        dbcur.execute(
+            "DELETE FROM %s WHERE func = '%s' AND args = '%s'" % (table, f, a)
+        )
+        dbcur.execute("INSERT INTO %s Values (?, ?, ?, ?)" % table, (f, a, r, t))
+        dbcon.commit()
+    except:
+        pass
+
+    try:
+        return eval(r.encode("utf-8"))
+    except:
+        pass
 
 
 def cache_get(key):
@@ -92,13 +163,12 @@ def cache_insert(key, value):
         % cache_table
     )
     update_result = cursor.execute(
-        "UPDATE %s SET value=?,date=? WHERE key=?"
-        % cache_table, (value, now, key))
+        "UPDATE %s SET value=?,date=? WHERE key=?" % cache_table, (value, now, key)
+    )
 
     if update_result.rowcount is 0:
         cursor.execute(
-            "INSERT INTO %s Values (?, ?, ?)"
-            % cache_table, (key, value, now)
+            "INSERT INTO %s Values (?, ?, ?)" % cache_table, (key, value, now)
         )
 
     cursor.connection.commit()
@@ -108,7 +178,7 @@ def cache_clear():
     try:
         cursor = _get_connection_cursor()
 
-        for t in [cache_table, 'rel_list', 'rel_lib']:
+        for t in [cache_table, "rel_list", "rel_lib"]:
             try:
                 cursor.execute("DROP TABLE IF EXISTS %s" % t)
                 cursor.execute("VACUUM")
@@ -123,7 +193,7 @@ def cache_clear_meta():
     try:
         cursor = _get_connection_cursor_meta()
 
-        for t in ['meta']:
+        for t in ["meta"]:
             try:
                 cursor.execute("DROP TABLE IF EXISTS %s" % t)
                 cursor.execute("VACUUM")
@@ -138,7 +208,7 @@ def cache_clear_providers():
     try:
         cursor = _get_connection_cursor_providers()
 
-        for t in ['rel_src', 'rel_url']:
+        for t in ["rel_src", "rel_url"]:
             try:
                 cursor.execute("DROP TABLE IF EXISTS %s" % t)
                 cursor.execute("VACUUM")
@@ -153,7 +223,7 @@ def cache_clear_search():
     try:
         cursor = _get_connection_cursor_search()
 
-        for t in ['tvshow', 'movies']:
+        for t in ["tvshow", "movies"]:
             try:
                 cursor.execute("DROP TABLE IF EXISTS %s" % t)
                 cursor.execute("VACUUM")
@@ -230,7 +300,9 @@ def _hash_function(function_instance, *args):
 
 
 def _get_function_name(function_instance):
-    return re.sub('.+\smethod\s|.+function\s|\sat\s.+|\sof\s.+', '', repr(function_instance))
+    return re.sub(
+        ".+\smethod\s|.+function\s|\sat\s.+|\sof\s.+", "", repr(function_instance)
+    )
 
 
 def _generate_md5(*args):
@@ -246,32 +318,31 @@ def _is_cache_valid(cached_time, cache_timeout):
 
 
 def cache_version_check():
+
     if _find_cache_version():
-        cache_clear();cache_clear_meta();cache_clear_providers()
-        control.infoDialog(control.lang(32057).encode('utf-8'), sound=True, icon='INFO')
+        cache_clear()
+        cache_clear_meta()
+        cache_clear_providers()
+        control.infoDialog(control.lang(32057).encode("utf-8"), sound=True, icon="INFO")
 
 
 def _find_cache_version():
+
     import os
 
-    versionFile = os.path.join(control.dataPath, 'cache.v')
+    versionFile = os.path.join(control.dataPath, "cache.v")
     try:
-        if not os.path.exists(versionFile):
-            f = open(versionFile, 'w')
-            f.close()
-    except Exception:
-        import xbmc
-        print 'Fuzzy Britches Addon Data Path Does not Exist. Creating Folder....'
-        ad_folder = xbmc.translatePath('special://home/userdata/addon_data/plugin.video.fuzzybritches')
-        os.makedirs(ad_folder)
-
+        with open(versionFile, "rb") as fh:
+            oldVersion = fh.read()
+    except:
+        oldVersion = "0"
     try:
-        with open(versionFile, 'rb') as fh: oldVersion = fh.read()
-    except: oldVersion = '0'
-    try:
-        curVersion = control.addon('script.module.fuzzybritches').getAddonInfo('version')
+        curVersion = control.addon("script.module.fuzzybritches").getAddonInfo("version")
         if oldVersion != curVersion:
-            with open(versionFile, 'wb') as fh: fh.write(curVersion)
+            with open(versionFile, "wb") as fh:
+                fh.write(curVersion)
             return True
-        else: return False
-    except: return False
+        else:
+            return False
+    except:
+        return False

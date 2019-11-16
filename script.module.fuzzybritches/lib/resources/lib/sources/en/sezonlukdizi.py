@@ -30,8 +30,8 @@ class source:
     def __init__(self):
         self.priority = 1
         self.language = ['en']
-        self.domains = ['sezonlukdizi.net', 'sezonlukdizi.com']
-        self.base_link = 'https://sezonlukdizi.org'
+        self.domains = ['sezonlukdizi.org/']
+        self.base_link = 'https://sezonlukdizi.org/'
         self.search_link = '/js/series1.js'
         self.video_link = '/ajax/dataEmbed.asp'
 
@@ -40,9 +40,10 @@ class source:
             t = [tvshowtitle] + source_utils.aliases_to_array(aliases)
             t = [cleantitle.get(i) for i in set(t) if i]
 
-            url = [i[0] for i in self.sezonlukdizi_tvcache() if cleantitle.get(i[1]) in t][0]
+            url = [i[0] for i in cache.get(self.sezonlukdizi_tvcache, 120) if cleantitle.get(i[1]) in t][0]
+
             return source_utils.strip_domain(url)
-        except BaseException:
+        except:
             return
 
     def sezonlukdizi_tvcache(self):
@@ -64,7 +65,7 @@ class source:
             result = [(i[0][0] + '/', cleantitle.query(self.lat2asc(i[1]))) for i in result if len(i[0]) > 0]
 
             return result
-        except BaseException:
+        except:
             return []
 
     def lat2asc(self, title):
@@ -78,7 +79,7 @@ class source:
 
             url = '%s%01d-sezon-%01d-bolum.html' % (url.replace('.html', ''), int(season), int(episode))
             return source_utils.strip_domain(url)
-        except BaseException:
+        except:
             return []
 
     def sources(self, url, hostDict, hostprDict):
@@ -109,16 +110,7 @@ class source:
                     if url.startswith('/'): url = urlparse.urljoin(self.base_link, url)
 
                     valid, host = source_utils.is_host_valid(url, hostDict)
-                    if valid:
-                        if 'ok.ru' in host:
-                            okinfo = directstream.odnoklassniki(url)
-                            for x in okinfo:
-                                sources.append(
-                                    {'source': host, 'quality': x['quality'], 'language': 'en', 'url': x['url'],
-                                     'direct': True, 'debridonly': False})
-
-                        else:
-                            sources.append({'source': host, 'quality': 'HD', 'language': 'en', 'url': url, 'direct': False, 'debridonly': False})
+                    if valid: sources.append({'source': host, 'quality': 'HD', 'language': 'en', 'url': url, 'direct': False, 'debridonly': False})
 
                     if '.asp' not in url: continue
 
@@ -131,11 +123,9 @@ class source:
                         if valid:
                             if host == 'gvideo':
                                 ginfo = directstream.google(url)
-                                for g in ginfo:
-                                    sources.append({'source': host, 'quality': g['quality'], 'language': 'en', 'url': g['url'], 'direct': True, 'debridonly': False})
-                            else:
-                                sources.append({'source': host, 'quality': 'HD', 'language': 'en', 'url': url, 'direct': False, 'debridonly': False})
-                    except BaseException: pass
+                                for g in ginfo: sources.append({'source': host, 'quality': g['quality'], 'language': 'en', 'url': g['url'], 'direct': True, 'debridonly': False})
+                            else: sources.append({'source': host, 'quality': 'HD', 'language': 'en', 'url': url, 'direct': False, 'debridonly': False})
+                    except: pass
 
                     captions = re.search('''["']?kind["']?\s*:\s*(?:\'|\")captions(?:\'|\")''', result)
                     if not captions: continue
@@ -147,11 +137,11 @@ class source:
                     result = [(i[0], i[1]) for i in result if not i[1].endswith('.vtt')]
 
                     for quality, url in result: sources.append({'source': 'gvideo', 'quality': quality, 'language': 'en', 'url': url, 'direct': True, 'debridonly': False})
-                except BaseException:
+                except:
                     pass
 
             return sources
-        except BaseException:
+        except:
             return sources
 
     def resolve(self, url):
@@ -159,5 +149,5 @@ class source:
             if url.startswith('//'): url = 'http:' + url
             if url.startswith('/'): url = urlparse.urljoin(self.base_link, url)
             return url
-        except BaseException:
+        except:
             pass

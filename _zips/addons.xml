@@ -32,7 +32,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.fuzzybritches" version="3.0.3.0" name="Fuzzy Britches" provider-name="The Papaw">
+<addon id="plugin.video.fuzzybritches" version="3.0.4" name="Fuzzy Britches" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.fuzzybritches" />
@@ -347,7 +347,7 @@ Please give credit to all the devolopers that have and do contribute to this add
   </extension>
 </addon>
 
-<addon id="script.fuzzybritches.artwork" version="3.0.0.0" name="Fuzzy Britches Artwork" provider-name="The Papaw">
+<addon id="script.fuzzybritches.artwork" version="3.0.4" name="Fuzzy Britches Artwork" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
 	</requires>
@@ -363,7 +363,7 @@ Please give credit to all the devolopers that have and do contribute to this add
 	</extension>
 </addon>
 
-<addon id="script.fuzzybritches.metadata" version="3.0.0.0" name="Fuzzy Britches Metadata" provider-name="The Papaw">
+<addon id="script.fuzzybritches.metadata" version="3.0.4" name="Fuzzy Britches Metadata" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
 	</requires>
@@ -397,7 +397,7 @@ Please give credit to all the devolopers that have and do contribute to this add
 	</extension>
 </addon>
 
-<addon id="script.module.fuzzybritches" name="Fuzzy Britches Module" version="3.0.3.0" provider-name="The Papaw">
+<addon id="script.module.fuzzybritches" name="Fuzzy Britches Module" version="3.0.4" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>

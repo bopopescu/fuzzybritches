@@ -26,7 +26,7 @@ class source:
         self.priority = 1
         self.language = ['en']
         self.domains = ['cmovieshd.bz']
-        self.base_link = 'http://w1.cmovieshd.bz'
+        self.base_link = 'https://www1.cmovieshd.bz/'
         self.search_link = '/film/%s/watching.html?ep=0'
 
     def movie(self, imdb, title, localtitle, aliases, year):

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-'''
-    Fuzzy Britches Add-on
+"""
+    Included with the Fuzzy Britches II Add-on
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-'''
+"""
 
 
 import os
@@ -132,9 +132,11 @@ key = "RgUkXp2s5v8x/A?D(G+KbPeShVmYq3t6"
 
 iv = "p2s5v8y/B?E(H+Mb"
 
+#eggman or others have cloned me
+
 def addonIcon():
     theme = appearance() ; art = artPath()
-    if not (art == None and theme in ['-', '']): return os.path.join(art, 'icon.gif')
+    if not (art == None and theme in ['-', '']): return os.path.join(art, 'icon.png')
     return addonInfo('icon')
 
 
@@ -165,7 +167,7 @@ def addonFanart():
 
 def addonNext():
     theme = appearance() ; art = artPath()
-    if not (art == None and theme in ['-', '']): return os.path.join(art, 'icon.gif')
+    if not (art == None and theme in ['-', '']): return os.path.join(art, 'next.png')
     return 'DefaultVideo.png'
 
 
@@ -220,6 +222,12 @@ def yesnoDialog(line1, line2, line3, heading=addonInfo('name'), nolabel='', yesl
 
 def selectDialog(list, heading=addonInfo('name')):
     return dialog.select(heading, list)
+
+
+def moderator():
+    netloc = [urlparse.urlparse(sys.argv[0]).netloc, '', 'plugin.video.live.streamspro', 'plugin.video.metallik', 'script.extendedinfo', 'plugin.video.phstreams', 'plugin.video.cpstreams', 'plugin.video.tinklepad', 'script.tvguide.fullscreen', 'script.tvguide.assassins']
+
+    if not infoLabel('Container.PluginName') in netloc: pass
 
 
 def metaFile():
