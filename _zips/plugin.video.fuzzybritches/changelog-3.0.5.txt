@@ -1,0 +1,21 @@
+[B][COLOR deepskyblue]                                  ••••• [/COLOR][/B][B][COLOR yellow] LATEST NEWS [/COLOR][/B][B][COLOR deepskyblue] •••••[/COLOR][/B]
+
+[B][COLOR deepskyblue]• [/COLOR][/B][COLOR deepskyblue]CURRENT STATUS:[/COLOR][COLOR orange] Good[/COLOR][COLOR darkcyan] (using a temp fix with some artwork issues until tvdb.com gets their new website issues resolved (see below))[/COLOR] 
+[COLOR deepskyblue]********************************************************************************************[/COLOR]
+[B][COLOR limegreen]v3.0.5 (11-18-19)[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Documentary section enabled again
+[B][COLOR deepskyblue]• [/COLOR][/B] More scraper Work
+[B][COLOR deepskyblue]• [/COLOR][/B] Cleaned up News
+
+[B][COLOR limegreen]v3.0.4 (11-16-19)[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] TVDB.com is trying to migrate to their new site once again and it has a majority of 3rd party addons messed up. This is a temporary fix until they either revert back, as they did last time they tried this, or until they resolve their issues with v3 of the site
+[B][COLOR deepskyblue]• [/COLOR][/B] Licensing changes
+[B][COLOR deepskyblue]• [/COLOR][/B] Scraper Work
+
+[B][COLOR limegreen]v1.0.0[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Initial release
+[B][COLOR deepskyblue]• [/COLOR][/B] Forked from Covenant
+
+
+
+

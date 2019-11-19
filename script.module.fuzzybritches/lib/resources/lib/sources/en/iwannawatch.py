@@ -15,7 +15,6 @@
 Included with the Fuzzy Britches Add-on
 '''
 
-
 import re,requests,urlparse
 from resources.lib.modules import cleantitle,source_utils
 
@@ -30,13 +29,12 @@ class source:
         self.base_link = 'https://www.iwannawatch.is'
         self.search_link = '/wp-admin/admin-ajax.php?action=bunyad_live_search&query=%s'
 
-
     def movie(self, imdb, title, localtitle, aliases, year):
         try:
             search_id = cleantitle.getsearch(title)
             url = urlparse.urljoin(self.base_link, self.search_link)
             url = url  % (search_id.replace(' ', '+').replace('-', '+').replace('++', '+'))
-            headers = {'User-Agent':User_Agent}
+            headers = {'User-Agent': User_Agent}
             search_results = requests.get(url,headers=headers,timeout=10).content
             match = re.compile('<li>.+?<a href="(.+?)".+?title="(.+?)".+?<a href=.+?>(.+?)<',re.DOTALL).findall(search_results)
             for row_url, row_title, release in match:
@@ -47,14 +45,13 @@ class source:
         except:
             return
 
-
     def sources(self, url, hostDict, hostprDict):
         try:
             sources = []
-            if url == None:
+            if url is None:
                 return sources
-            headers = {'User-Agent':User_Agent}
-            html = requests.get(url,headers=headers,timeout=10).content
+            headers = {'User-Agent': User_Agent}
+            html = requests.get(url, headers=headers, timeout=10).content
             try:
                 qual = re.compile('<div class="cf">.+?class="quality">(.+?)</td>',re.DOTALL).findall(html)
                 for i in qual:
@@ -77,7 +74,5 @@ class source:
             return
         return sources
 
-
     def resolve(self, url):
         return url
-

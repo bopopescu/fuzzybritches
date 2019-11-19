@@ -15,7 +15,6 @@
 Included with the Fuzzy Britches Add-on
 '''
 
-
 import re,requests,urlparse
 from resources.lib.modules import cleantitle,source_utils
 

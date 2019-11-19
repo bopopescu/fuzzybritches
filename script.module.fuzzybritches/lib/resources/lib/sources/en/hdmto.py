@@ -15,12 +15,8 @@
 Included with the Fuzzy Britches Add-on
 '''
 
-import re
-import urllib
-import urlparse
-from resources.lib.modules import cleantitle
-from resources.lib.modules import client
-from resources.lib.modules import proxy
+import re,urllib,urlparse
+from resources.lib.modules import cleantitle,client,source_utils,proxy,cfscrape
 
 
 class source:
@@ -29,28 +25,35 @@ class source:
         self.language = ['en']
         self.domains = ['hdm.to']
         self.base_link = 'https://hdm.to'
+        self.scraper = cfscrape.create_scraper()
+
 
     def movie(self, imdb, title, localtitle, aliases, year):
         try:
-            url = cleantitle.geturl(title)
+            tit = cleantitle.geturl(title)
+            url = '%s/%s/' % (self.base_link,tit)
             return url
         except:
             return
 
+
     def sources(self, url, hostDict, hostprDict):
         try:
             sources = []
-            url = '%s/%s/' % (self.base_link,url)
-            r = client.request(url)
+            r = self.scraper.get(url).content
             try:
                 match = re.compile('<iframe.+?src="(.+?)"').findall(r)
                 for url in match:
-                    sources.append({'source': 'Openload.co','quality': '1080p','language': 'en','url': url,'direct': False,'debridonly': False}) 
+                    valid, host = source_utils.is_host_valid(url, hostDict)
+                    if valid:
+                        sources.append({'source': host, 'quality': 'HD', 'language': 'en', 'url': url, 'direct': False, 'debridonly': False}) 
             except:
                 return
         except Exception:
             return
         return sources
 
+
     def resolve(self, url):
         return url
+

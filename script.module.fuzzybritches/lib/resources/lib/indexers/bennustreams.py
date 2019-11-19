@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""
+'''
     Included with the Fuzzy Britches Add-on
 
     This program is free software: you can redistribute it and/or modify
@@ -15,7 +15,7 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-"""
+'''
 
 
 import os, re, sys, hashlib, urllib, urlparse, json, base64, random, datetime

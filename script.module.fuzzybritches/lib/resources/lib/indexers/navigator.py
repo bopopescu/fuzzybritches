@@ -40,7 +40,7 @@ queueMenu = control.lang(32065).encode('utf-8')
 
 class navigator:
     def root(self):
-        self.addDirectoryItem('[B][COLOR gold]• [/COLOR][/B][B][COLOR white]Fuzzy Britches News[/COLOR][/B][B][COLOR gold] •[/COLOR][/B]',  'ShowChangelog',  'icon.gif',  'DefaultFolder.png')
+        self.addDirectoryItem('[B][COLOR gold]• [/COLOR][/B][B][COLOR yellow]Fuzzy Britches News[/COLOR][/B][B][COLOR gold] •[/COLOR][/B]',  'ShowChangelog',  'icon.gif',  'DefaultFolder.png')
         self.addDirectoryItem(32001, 'movieNavigator', 'movies.png', 'DefaultMovies.png')
         self.addDirectoryItem(32002, 'tvNavigator', 'tvshows.png', 'DefaultTVShows.png')
         if not control.setting('lists.widget') == '0':
@@ -50,7 +50,7 @@ class navigator:
             self.addDirectoryItem(32708, 'tvNetworks', 'networks.png', 'DefaultTVShows.png')
             self.addDirectoryItem(32709, 'boxsetsNavigator', 'boxsets1.png', 'boxsets1.png')
 
-#        self.addDirectoryItem(32700, 'docuHeaven', 'documentaries.png', 'DefaultMovies.png')
+        self.addDirectoryItem(32700, 'docuHeaven', 'documentaries.png', 'DefaultMovies.png')
 
         self.addDirectoryItem(32008, 'toolNavigator', 'tools.png', 'DefaultAddonProgram.png')
 

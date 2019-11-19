@@ -56,6 +56,10 @@ class source:
         except:
             return
 
+# videozoome
+# playbbme
+# easyvideo
+# playpanda # playpandanet.gogoanime.to/
     def sources(self, url, hostDict, hostprDict):
         try:
             sources = []

@@ -4,19 +4,6 @@
 # Translators:
 # Translators:
 # Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
 msgid ""
 msgstr ""
 "Project-Id-Version: Fuzzy Britches\n"
@@ -184,15 +171,15 @@ msgid "[B][COLOR crimson]• [/COLOR][/B][COLOR ghostwhite]Episodes[/COLOR][B][C
 msgstr ""
 
 msgctxt "#32039"
-msgid "[B][COLOR slateblue]• [/COLOR][/B][COLOR ghostwhite]Movie Lists[/COLOR][B][COLOR slateblue] •[/COLOR][/B]"
+msgid "[B][COLOR slateblue]• [/COLOR][/B][COLOR ghostwhite]Trakt Lists - Movies[/COLOR][B][COLOR slateblue] •[/COLOR][/B]"
 msgstr ""
 
 msgctxt "#32040"
-msgid "[B][COLOR slateblue]• [/COLOR][/B][COLOR ghostwhite]TV Show Lists[/COLOR][B][COLOR slateblue] •[/COLOR][/B]"
+msgid "[B][COLOR slateblue]• [/COLOR][/B][COLOR ghostwhite]Trakt Lists - TV Shows[/COLOR][B][COLOR slateblue] •[/COLOR][/B]"
 msgstr ""
 
 msgctxt "#32041"
-msgid "[B][COLOR slateblue]• [/COLOR][/B][COLOR ghostwhite]Episode Lists[/COLOR][B][COLOR slateblue] •[/COLOR][/B]"
+msgid "[B][COLOR slateblue]• [/COLOR][/B][COLOR ghostwhite]Trakt Lists - Episodes[/COLOR][B][COLOR slateblue] •[/COLOR][/B]"
 msgstr ""
 
 msgctxt "#32042"
@@ -1076,7 +1063,7 @@ msgid "[B][COLOR firebrick]• [/COLOR][/B][COLOR ghostwhite]Marvel TV[/COLOR][B
 msgstr ""
 
 msgctxt "#32711"
-msgid "[B][COLOR darkorange]• [/COLOR][/B][COLOR ghostwhite]Collections[/COLOR]"
+msgid "[B][COLOR darkorange]• [/COLOR][/B][COLOR ghostwhite]Movie Collections[/COLOR]"
 msgstr ""
 
 msgctxt "#32712"
@@ -1093,8 +1080,4 @@ msgstr ""
 
 msgctxt "#70003"
 msgid "Providers (2)"
-msgstr ""
-
-msgctxt "#32711"
-msgid "[B][COLOR darkorange]• [/COLOR][/B][COLOR ghostwhite]Collections[/COLOR]"
 msgstr ""

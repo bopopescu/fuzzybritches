@@ -15,7 +15,6 @@
 Included with the Fuzzy Britches Add-on
 '''
 
-
 import re,traceback,urllib,urlparse,hashlib,random,string,json,base64,sys,xbmc,resolveurl
 
 from resources.lib.modules import cleantitle

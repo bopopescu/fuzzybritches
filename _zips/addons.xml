@@ -32,7 +32,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.fuzzybritches" version="3.0.4" name="Fuzzy Britches" provider-name="The Papaw">
+<addon id="plugin.video.fuzzybritches" version="3.0.5" name="Fuzzy Britches" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.fuzzybritches" />
@@ -41,6 +41,7 @@
 		<import addon="script.module.resolveurl" />
 		<import addon="script.module.requests" />
 		<import addon="script.module.metahandler" />
+		<import addon="plugin.video.youtube" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="fuzzybritches.py">
 		<provides>video</provides>
@@ -48,10 +49,10 @@
 	<extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">The OFFICIAL [B]Fuzzy Britches Addon[/B]</summary>
-		<description lang="en">[B][COLOR yellow]The Official Fuzzy Britches Addon[/B][/COLOR][CR]Created for my beautiful wife (nicknamed [COLOR yellow]Fuzzy Britches[/COLOR]). Works with PSMC as well as Kodi 18.</description>
-		<disclaimer lang="en">The author of this addon does NOT host any of the content which is found and has no affiliation with any of the content providers. This addon simply searches websites for content. This addon does not form part of the Kodi Media Center. Please do not seek assistance with this addon from any of the Official Kodi Support Channels. Use at your own risk! The code for this addon was forked from other addons and modded and patched together by The Papaw.</disclaimer>
+		<description lang="en">[B][COLOR yellow]The Official Fuzzy Britches Addon[/B][/COLOR][CR]Created for my beautiful wife (nicknamed [COLOR yellow]Fuzzy Britches[/COLOR]). Works with Kodi</description>
+		<disclaimer lang="en">The author of this addon does NOT host any of the content which is found and has no affiliation with any of the content providers. This addon simply searches websites for content. This addon does not form part of the Kodi Media Center. Please do not seek assistance with this addon from any of the Official Kodi Support Channels. Use at your own risk! The code for this addon was patched together by The Papaw.</disclaimer>
 		<platform>all</platform>
-		<license></license>
+		<license>CC BY-NC-SA 4.0</license>
 		<forum></forum>
 		<website>https://github.com/ThePapaw/fuzzybritches</website>
 		<source>https://github.com/ThePapaw/fuzzybritches</source>
@@ -347,15 +348,20 @@ Please give credit to all the devolopers that have and do contribute to this add
   </extension>
 </addon>
 
-<addon id="script.fuzzybritches.artwork" version="3.0.4" name="Fuzzy Britches Artwork" provider-name="The Papaw">
+<addon id="script.fuzzybritches.artwork" version="3.0.5" name="Fuzzy Britches Artwork" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
-		<summary>Themes for the Fuzzy Britches Addon</summary>
-		<description>Themes for Fuzzy Britches are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<summary>Artwork Themed  for the Fuzzy Britches Addon</summary>
+		<description>Artwork Themed  for Fuzzy Britches are maintained separately to make distribution of the the addon itself easier/faster.</description>
 		<platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<forum></forum>
+		<website>https://github.com/ThePapaw/fuzzybritches</website>
+		<source>https://github.com/ThePapaw/fuzzybritches</source>
+		<video_guide></video_guide>
         <assets>
 	      <icon>icon.png</icon>
 		  <fanart>fanart.jpg</fanart>
@@ -363,7 +369,7 @@ Please give credit to all the devolopers that have and do contribute to this add
 	</extension>
 </addon>
 
-<addon id="script.fuzzybritches.metadata" version="3.0.4" name="Fuzzy Britches Metadata" provider-name="The Papaw">
+<addon id="script.fuzzybritches.metadata" version="3.0.5" name="Fuzzy Britches Metadata" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
 	</requires>
@@ -372,6 +378,11 @@ Please give credit to all the devolopers that have and do contribute to this add
 		<summary>Metadata for Fuzzy Britches Addon</summary>
 		<description>Metadata for Fuzzy Britches are maintained separately to make distribution of the the addon itself easier/faster.</description>
 		<platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<forum></forum>
+		<website>https://github.com/ThePapaw/fuzzybritches</website>
+		<source>https://github.com/ThePapaw/fuzzybritches</source>
+		<video_guide></video_guide>
         <assets>
 	      <icon>icon.png</icon>
 		  <fanart>fanart.jpg</fanart>
@@ -397,14 +408,19 @@ Please give credit to all the devolopers that have and do contribute to this add
 	</extension>
 </addon>
 
-<addon id="script.module.fuzzybritches" name="Fuzzy Britches Module" version="3.0.4" provider-name="The Papaw">
+<addon id="script.module.fuzzybritches" name="Fuzzy Britches Module" version="3.0.5" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
 		<summary lang="en">Fuzzy Britches</summary>
+		<platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<forum></forum>
+		<website>https://github.com/ThePapaw/fuzzybritches</website>
+		<source>https://github.com/ThePapaw/fuzzybritches</source>
+		<video_guide></video_guide>
         <assets>
 	      <icon>icon.png</icon>
 		  <fanart>fanart.jpg</fanart>
