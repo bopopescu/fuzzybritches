@@ -136,7 +136,7 @@ iv = "p2s5v8y/B?E(H+Mb"
 
 def addonIcon():
     theme = appearance() ; art = artPath()
-    if not (art == None and theme in ['-', '']): return os.path.join(art, 'icon.png')
+    if not (art == None and theme in ['-', '']): return os.path.join(art, 'icon.gif')
     return addonInfo('icon')
 
 
