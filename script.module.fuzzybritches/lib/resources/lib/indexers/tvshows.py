@@ -1695,7 +1695,7 @@ class tvshows:
 
                 cm.append(
                     (
-                        "Jor-EL Settings",
+                        "Fuzzy Britches Settings",
                         "RunPlugin(%s?action=openSettings&query=(0,0))" % sysaddon,
                     )
                 )
