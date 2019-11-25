@@ -408,7 +408,7 @@ Please give credit to all the devolopers that have and do contribute to this add
 	</extension>
 </addon>
 
-<addon id="script.module.fuzzybritches" name="Fuzzy Britches Module" version="3.0.7" provider-name="The Papaw">
+<addon id="script.module.fuzzybritches" name="Fuzzy Britches Module" version="3.0.8" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
@@ -710,7 +710,7 @@ Please give credit to all the devolopers that have and do contribute to this add
 	</extension>
 </addon>
 
-<addon id="skin.psmc.silvo" version="2.1.794" name="PSMC's Silvo Skin" provider-name="The Papaw">
+<addon id="skin.psmc.silvo" version="2.2.794" name="PSMC's Silvo Skin" provider-name="The Papaw">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0" />
 		<import addon="script.skinshortcuts" version="1.0.10" />
