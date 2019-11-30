@@ -1,0 +1,151 @@
+
+{"movies": [
+
+    {"title": "Action",
+    "description": "Action Films played 24/7",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/Action.png?raw=true"
+    },
+
+    {"title": "Animated Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/AnimatedMovies.png?raw=true"
+    },
+
+    {"title": "Christmas Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/ChristmasMovies.png?raw=true"
+    },
+
+    {"title": "Comedy Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/ComedyMovies.png?raw=true"
+    },
+
+    {"title": "Cult Classics",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/CultClassics.png?raw=true"
+    },
+
+    {"title": "Disney Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/DisneyMovies.png?raw=true"
+    },
+
+    {"title": "Documentaries",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/Documentaries.png?raw=true"
+    },
+
+    {"title": "Harry Potter",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/HarryPotter.png?raw=true"
+    },
+
+    {"title": "Horror Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/HorrorMovies.png?raw=true"
+    },
+
+    {"title": "James Bond",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/JamesBond.png?raw=true"
+    },
+
+    {"title": "Kubrick Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/KubrickMovies.png?raw=true"
+    },
+
+    {"title": "Kung Fu Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/KungFuMovies.png?raw=true"
+    },
+
+    {"title": "Lord of the Rings",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/LordoftheRings.png?raw=true"
+    },
+
+    {"title": "Mafia Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/MafiaMovies.png?raw=true"
+    },
+
+    {"title": "Marvel Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/MarvelMovies.png?raw=true"
+    },
+
+    {"title": "Monster Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/MonsterMovies.png?raw=true"
+    },
+
+    {"title": "Movies with Arc",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/MovieswithArc.png?raw=true"
+    },
+
+    {"title": "Musical Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/MusicalMovies.png?raw=true"
+    },
+
+    {"title": "Mystery Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/MysteryMovies.png?raw=true"
+    },
+
+    {"title": "Pixar Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/PixarMovies.png?raw=true"
+    },
+
+    {"title": "Random Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/RandomMovies.png?raw=true"
+    },
+
+    {"title": "Romance Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/RomanceMovies.png?raw=true"
+    },
+
+    {"title": "SciFi Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/SciFiMovies.png?raw=true"
+    },
+
+    {"title": "Star Trek Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/StarTrekMovies.png?raw=true"
+    },
+
+    {"title": "Star Wars",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/StarWars.png?raw=true"
+    },
+
+    {"title": "Stephen King Films",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/StephenKingMovies.png?raw=true"
+    },
+
+    {"title": "Studio Ghibli",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/StudioGhibli.png?raw=true"
+    },
+
+    {"title": "War Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/WarMovies.png?raw=true"
+    },
+
+    {"title": "Western Movies",
+    "description": "",
+    "poster": "https://github.com/ThePapaw/xml/blob/master/img/arconaitv/WesternMovies.png?raw=true"
+    }
+
+]}
+
+

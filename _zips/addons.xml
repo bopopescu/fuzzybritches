@@ -80,6 +80,47 @@ Please give credit to all the devolopers that have and do contribute to this add
 	</extension>
 </addon>
 
+<addon id="plugin.video.fuzzybritches_v2" name="[COLOR yellow]Fuzzy Britches v2[/COLOR]" provider-name="The Papaw" version="1.0.2">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0" />
+        <import addon="script.module.fuzzybritches_v2" />
+        <import addon="script.fuzzybritches_v2.artwork" />
+        <import addon="script.module.resolveurl" />
+        <import addon="script.module.urlresolver" optional="true" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" />
+		<import addon="plugin.video.youtube" />
+    </requires>
+    <extension library="main.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="[startup|login]" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_US">The OFFICIAL [B]Fuzzy Britches v2 Add-on[/B]</summary>
+        <description lang="en_US">[B][COLOR yellow]The Official Fuzzy Britches v2 Addon[/B][/COLOR][CR]Created for my beautiful wife nicknamed [COLOR yellow]Fuzzy Britches[/COLOR]. Works with Kodi and other Kodi forks</description>
+        <disclaimer lang="en_US">The author of this addon does NOT host any of the content which is found and has no affiliation with any of the content providers. This addon simply searches websites for content. This addon does not form part of the Kodi Media Center. Please do not seek assistance with this addon from any of the official Kodi Support Channels. Use at your own risk! The code for this addon was patched together by The Papaw.</disclaimer>
+        <platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<forum></forum>
+		<website>https://github.com/ThePapaw/fuzzybritches</website>
+		<source>https://github.com/ThePapaw/fuzzybritches</source>
+		<video_guide></video_guide>
+        <assets>
+			<icon>icon.gif</icon>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/media/screenshot-01.jpg</screenshot>
+			<screenshot>resources/media/screenshot-02.jpg</screenshot>
+			<screenshot>resources/media/screenshot-03.jpg</screenshot>
+			<screenshot>resources/media/screenshot-04.jpg</screenshot>
+			<screenshot>resources/media/screenshot-05.jpg</screenshot>
+			<screenshot>resources/media/screenshot-06.jpg</screenshot>
+			<screenshot>resources/media/screenshot-07.jpg</screenshot>
+		</assets>
+        <news>[B]- Inital release[/B] </news>
+    </extension>
+</addon>
+
 <addon id="plugin.video.kidscove" name="Kids Cove" version="1.0.4" provider-name="The Papaw">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
@@ -390,6 +431,28 @@ Please give credit to all the devolopers that have and do contribute to this add
 	</extension>
 </addon>
 
+<addon id="script.fuzzybritches_v2.artwork" version="1.0.1" name="[COLOR orange]Fuzzy Britches v2 Artwork[/COLOR]" provider-name="The Papaw">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary>Artwork Themed for the Fuzzy Britches v2 Add-on</summary>
+        <description>Artwork Themed for Fuzzy Britches v2 Add-on. Maintained separately to make distribution of the the addon itself easier/faster.</description>
+        <platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<forum></forum>
+		<website>https://github.com/ThePapaw/fuzzybritches</website>
+		<source>https://github.com/ThePapaw/fuzzybritches</source>
+		<video_guide></video_guide>
+        <assets>
+	      <icon>icon.png</icon>
+		  <fanart>fanart.jpg</fanart>
+		</assets>
+        <news>Initial release</news>
+    </extension>
+</addon>
+
 <addon id="script.libraryeditor" name="Library Editor Script" version="0.9.0" provider-name="phil65">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
@@ -426,6 +489,33 @@ Please give credit to all the devolopers that have and do contribute to this add
 		  <fanart>fanart.jpg</fanart>
 		</assets>
 	</extension>
+</addon>
+
+<addon id="script.module.fuzzybritches_v2" name="[COLOR orange]Fuzzy Britches v2 Module[/COLOR]" provider-name="The Papaw" version="1.0.1">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0" />
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.beautifulsoup" />
+        <import addon="script.module.dateutil" />
+        <import addon="script.module.futures" />
+        <import addon="script.module.metahandler" />
+        <import addon="script.module.requests" />
+    </requires>
+    <extension library="lib" point="xbmc.python.module" />
+    <extension point="xbmc.addon.metadata">
+        <summary>Module for Fuzzy Britches v2 Add-on</summary>
+        <description>Module for Fuzzy Britches v2 Add-on</description>
+        <platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<forum></forum>
+		<website>https://github.com/ThePapaw/fuzzybritches</website>
+		<source>https://github.com/ThePapaw/fuzzybritches</source>
+		<video_guide></video_guide>
+        <assets>
+	      <icon>icon.png</icon>
+		  <fanart>fanart.jpg</fanart>
+		</assets>
+    </extension>
 </addon>
 
 <addon id="script.module.metahandler"
