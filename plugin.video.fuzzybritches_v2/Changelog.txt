@@ -2,7 +2,7 @@
 
 [B][COLOR deepskyblue]• [/COLOR][/B][COLOR deepskyblue]CURRENT STATUS:[/COLOR][COLOR orange] Real Good[/COLOR][COLOR darkcyan] (using a temp fix with some artwork issues until tvdb.com gets their shit together)[/COLOR] 
 [COLOR deepskyblue]********************************************************************************************[/COLOR]
-[B][COLOR limegreen]v1.0.2 (11-29-19)[/COLOR][/B]
+[B][COLOR limegreen]v1.0.1 (11-26-19)[/COLOR][/B]
 [B][COLOR deepskyblue]• [/COLOR][/B] Initial release
 
 

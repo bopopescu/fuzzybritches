@@ -4,7 +4,7 @@
     <category label="32310">
         <setting type="lsep" label="32310" />
         <setting id="appearance.alt" type="action" label="32311" default="-" option="close" action="RunPlugin(plugin://plugin.video.fuzzybritches_v2/?action=artwork)" visible="!System.HasAddon(script.fuzzybritches_v2.artwork)" />
-        <setting id="appearance.1" type="select" label="32311" values="FuzzyBritches" default="fuzzybritches" visible="System.HasAddon(script.fuzzybritches_v2.artwork)" />
+        <setting id="appearance.1" type="select" label="32311" values="FuzzyBritchesv2" default="fuzzybritchesv2" visible="System.HasAddon(script.fuzzybritches_v2.artwork)" />
         <setting id="fanart" type="bool" label="32318" default="false" />
         <setting id="api.language" type="select" label="32316" values="AUTO|Bulgarian|Chinese|Croatian|Czech|Danish|Dutch|English|Finnish|French|German|Greek|Hebrew|Hungarian|Italian|Japanese|Korean|Norwegian|Polish|Portuguese|Romanian|Russian|Serbian|Slovak|Slovenian|Spanish|Swedish|Thai|Turkish|Ukrainian" default="AUTO" />
         <setting id="providers.lang" type="select" label="32360" values="English|German|German+English|French|French+English|Polish|Polish+English|Korean|Korean+English|Russian|Russian+English|Spanish|Spanish+English|Greek|Greek+English" default="English" visible="true" />
