@@ -616,7 +616,7 @@ Please give credit to all the devolopers that have and do contribute to this add
         </extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.44" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.45" provider-name="tvaddons">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="plugin.video.youtube" optional="true" />
