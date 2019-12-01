@@ -80,7 +80,7 @@ Please give credit to all the devolopers that have and do contribute to this add
 	</extension>
 </addon>
 
-<addon id="plugin.video.fuzzybritches_v2" name="[COLOR orange]Fuzzy Britches v2[/COLOR]" provider-name="The Papaw" version="1.0.4">
+<addon id="plugin.video.fuzzybritches_v2" name="[COLOR orange]Fuzzy Britches v2[/COLOR]" provider-name="The Papaw" version="1.0.5">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.fuzzybritches_v2" />

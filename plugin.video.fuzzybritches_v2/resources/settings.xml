@@ -582,28 +582,24 @@
 
     <category label="32334">
         <setting label="About this Addon" type="lsep" />
-        <setting type="text" label="This is a fork of a fork of a fork of Cov/Exo." enable="false" />
-        <setting type="text" label="Made for Kodi 17.6 and 18 on a S7 Edge Android Phone." enable="false" />
-        <setting type="text" label="Support is pretty much for Kodi 18 Only now." enable="false" />
+        <setting type="text" label="This is fork pieced together from forks of Cov/Exo" enable="false" />
+        <setting type="text" label=" type addons." enable="false" />
+        <setting type="text" label="Support is pretty much for Kodi 18." enable="false" />
         <setting type="text" label="Language Files for translations are being added slowly." enable="false" />
         <setting label="About the Providers" type="lsep" />
-        <setting type="text" label="All the Providers are checked by me by the end of the month." enable="false" />
-        <setting type="text" label="You just gotta enable/disable the ones you dont like." enable="false" />
-        <setting type="text" label="Sorted them in settings by type of provider and language." enable="false" />
+        <setting type="text" label="All the Providers are checked best I can." enable="false" />
         <setting type="text" label="The Debrid providers are disabled by default." enable="false" />
         <setting type="text" label="Spare Providers are disabled by default, some are dupes of others." enable="false" />
         <setting type="text" label="Enable a few if your wanting more results." enable="false" />
-        <setting type="text" label="Its not wise to enable every Provider, thats just dumb and kills sites." enable="false" />
         <setting type="text" label="Sources that fail may need Pairing.(Like https://olpair.com/pair)" enable="false" />
-        <setting type="text" label="(Other Languages Will Not Be Checked Any Longer.)" enable="false" />
         <setting label="Contact Me" type="lsep" />
-        <setting type="text" label="nothing" enable="false" />
-        <setting type="text" label="nothing?" enable="false" />
-        <setting type="text" label="Feel Free to Contact Me Anytime for Any Reason lol." enable="false" />
+        <setting type="text" label="" enable="false" />
+        <setting type="text" label="?" enable="false" />
+        <setting type="text" label="" enable="false" />
         <setting type="text" label="Email : nothing" enable="false" />
-        <setting type="text" label="GitHub : nothing" enable="false" />
+        <setting type="text" label="GitHub : https://thepapaw.github.io" enable="false" />
         <setting type="text" label="KeyBase : nothing" enable="false" />
-        <setting type="text" label="WebSite : https://thepapaw.github.io" enable="false" />
+        <setting type="text" label="WebSite : " enable="false" />
         <setting type="sep" />
     </category>
 
