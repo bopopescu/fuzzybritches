@@ -3,7 +3,7 @@ This repository is primarily for the development of PSMC/Kodi addons forked, mod
 All items hosted here are for learning and educational purposes only. They include:
 
 • <B>Fuzzy Britches v2</B> (Exodus type). <BR>
-• <B>Fuzzy Britches</B> (Exodus type) ***Discontinued support** (replaced with Fuzzy Britches v2). <BR>
+• <B>Fuzzy Britches</B> (Exodus type). (***Discontinued support**) <BR>
 • <B>Kids Cove</B> (Jen based)<BR>
 • <B>PSMC Maintenance</B> (Maintenance Program)<BR>
 • <B>Various Skins - see below</B> (Usually themed from the Aeon-nox Sylvo v7.9.4 skin)<BR>
