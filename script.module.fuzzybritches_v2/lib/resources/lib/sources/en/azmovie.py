@@ -11,8 +11,7 @@
 # Addon id: script.module.fuzzybritches_v2
 # Addon Provider: The Papaw
 
-import re
-
+from resources.lib.modules import cfscrape
 from resources.lib.modules import cleantitle
 from resources.lib.modules import client
 from resources.lib.modules import source_utils
@@ -22,41 +21,38 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['hubmovie.cc', 'hubmoviehd.net']
-		self.base_link = 'http://hubmovie.cc'
-		self.search_link = '/pages/search2/%s'
+		self.domains = ['azm.to', 'azmovie.to']
+		self.base_link = 'https://azm.to'
+		self.search_link = '/watch.php?title=%s'
+		self.scraper = cfscrape.create_scraper()
 
 	def movie(self, imdb, title, localtitle, aliases, year):
 		try:
-			search_id = cleantitle.getsearch(title)
-			search_url = self.base_link + self.search_link % (search_id.replace(':', ' ').replace(' ', '%20'))
-			search_results = client.request(search_url)
-			match = re.compile('<a href=".(.+?)">', re.DOTALL).findall(search_results)
-			for link in match:
-				if cleantitle.geturl(title).lower() in link:
-					url = self.base_link + link
-					return url
-			return
+			title = cleantitle.geturl(title).replace('-', '+').replace(':', '%3A+')
+			url = self.base_link + self.search_link % title
+			return url
 		except:
 			return
 
 	def sources(self, url, hostDict, hostprDict):
 		try:
 			sources = []
-			hostDict = hostDict + hostprDict
-			if url is None:
+			hostDict = hostprDict + hostDict
+			r = self.scraper.get(url).content
+			u = client.parseDOM(r, "ul", attrs={"id": "serverul"})
+
+			for t in u:
+				u = client.parseDOM(t, 'a', ret='href')
+				for url in u:
+					quality = source_utils.check_url(url)
+					valid, host = source_utils.is_host_valid(url, hostDict)
+					if valid or 'getlink' in url:
+						sources.append(
+							{'source': host, 'quality': quality, 'language': 'en', 'url': url, 'direct': False,
+							 'debridonly': False})
 				return sources
-			html = client.request(url)
-			links = re.compile('<div class="link_go">.+?<a href="(.+?)" target="_blank">', re.DOTALL).findall(html)
-			for link in links:
-				valid, host = source_utils.is_host_valid(link, hostDict)
-				if valid:
-					quality, info = source_utils.get_release_quality(link, link)
-					sources.append({'source': host, 'quality': quality, 'language': 'en', 'url': link, 'info': info,
-					                'direct': False, 'debridonly': False})
-			return sources
 		except:
-			return sources
+			return
 
 	def resolve(self, url):
 		return url

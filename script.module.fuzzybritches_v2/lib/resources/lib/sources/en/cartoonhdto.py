@@ -12,11 +12,10 @@
 # Addon Provider: The Papaw
 
 import re
-import traceback
 
 from resources.lib.modules import cfscrape
 from resources.lib.modules import cleantitle
-from resources.lib.modules import log_utils
+from resources.lib.modules import more_sources
 from resources.lib.modules import source_utils
 
 
@@ -24,27 +23,31 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['1putlocker.io']
-		self.base_link = 'https://www15.1putlocker.io'
+		self.domains = ['cartoonhd.to']
+		self.base_link = 'https://www.cartoonhd.to'
+		self.search_link = '/?s=%s'
 		self.scraper = cfscrape.create_scraper()
 
 	def movie(self, imdb, title, localtitle, aliases, year):
 		try:
-			title = cleantitle.geturl(title)
-			url = self.base_link + '/%s/' % title
-			return url
-		except Exception:
-			failure = traceback.format_exc()
-			log_utils.log('1putlocker - Exception: \n' + str(failure))
+			searchName = cleantitle.getsearch(title)
+			searchURL = self.base_link + self.search_link % (searchName.replace(':', ' ').replace(' ', '+'))
+			searchPage = self.scraper.get(searchURL).content
+			results = re.compile('<a href="(.+?)">(.+?)</a>.+?<span class="year">(.+?)</span>', re.DOTALL).findall(
+				searchPage)
+			for url, zName, zYear in results:
+				if cleantitle.geturl(title).lower() in cleantitle.geturl(zName).lower():
+					if year in str(zYear):
+						url = url + "?watching"
+						return url
+		except:
 			return
 
 	def tvshow(self, imdb, tvdb, tvshowtitle, localtvshowtitle, aliases, year):
 		try:
 			url = cleantitle.geturl(tvshowtitle)
 			return url
-		except Exception:
-			failure = traceback.format_exc()
-			log_utils.log('1putlocker - Exception: \n' + str(failure))
+		except:
 			return
 
 	def episode(self, url, imdb, tvdb, title, premiered, season, episode):
@@ -52,11 +55,9 @@ class source:
 			if url is None:
 				return
 			tvshowtitle = url
-			url = self.base_link + '/episode/%s-season-%s-episode-%s/' % (tvshowtitle, season, episode)
+			url = self.base_link + '/episodes/%s-season-%s-episode-%s/?watching' % (tvshowtitle, season, episode)
 			return url
-		except Exception:
-			failure = traceback.format_exc()
-			log_utils.log('1putlocker - Exception: \n' + str(failure))
+		except:
 			return
 
 	def sources(self, url, hostDict, hostprDict):
@@ -64,23 +65,21 @@ class source:
 			sources = []
 			if url is None:
 				return sources
-			r = self.scraper.get(url).content
-			try:
-				match = re.compile('<iframe src="(.+?)"').findall(r)
-				for url in match:
-					quality = source_utils.check_url(url)
-					valid, host = source_utils.is_host_valid(url, hostDict)
-					if valid:
-						sources.append(
-							{'source': host, 'quality': quality, 'language': 'en', 'url': url, 'direct': False,
-							 'debridonly': False})
-			except:
-				return
-		except Exception:
-			failure = traceback.format_exc()
-			log_utils.log('1putlocker - Exception: \n' + str(failure))
-			return
-		return sources
+			hostDict = hostDict + hostprDict
+			sourcePage = self.scraper.get(url).content
+			links = re.compile('<iframe.+?src="(.+?)"', re.DOTALL).findall(sourcePage)
+			for link in links:
+				if "gomostream.com" in link:
+					for source in more_sources.more_gomo(link, hostDict):
+						sources.append(source)
+				else:
+					quality, info = source_utils.get_release_quality(link, link)
+					valid, host = source_utils.is_host_valid(link, hostDict)
+					sources.append({'source': host, 'quality': quality, 'language': 'en', 'url': link, 'info': info,
+					                'direct': False, 'debridonly': False})
+			return sources
+		except:
+			return sources
 
 	def resolve(self, url):
 		return url

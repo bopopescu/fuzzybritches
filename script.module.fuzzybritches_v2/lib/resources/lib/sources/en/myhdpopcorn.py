@@ -22,37 +22,48 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['hubmovie.cc', 'hubmoviehd.net']
-		self.base_link = 'http://hubmovie.cc'
-		self.search_link = '/pages/search2/%s'
+		self.domains = ['hdpopcorns.eu']
+		self.base_link = 'https://hdpopcorns.eu'
 
 	def movie(self, imdb, title, localtitle, aliases, year):
 		try:
-			search_id = cleantitle.getsearch(title)
-			search_url = self.base_link + self.search_link % (search_id.replace(':', ' ').replace(' ', '%20'))
-			search_results = client.request(search_url)
-			match = re.compile('<a href=".(.+?)">', re.DOTALL).findall(search_results)
-			for link in match:
-				if cleantitle.geturl(title).lower() in link:
-					url = self.base_link + link
-					return url
+			title = cleantitle.geturl(title)
+			url = self.base_link + '/%s/' % title
+			return url
+		except:
 			return
+
+	def tvshow(self, imdb, tvdb, tvshowtitle, localtvshowtitle, aliases, year):
+		try:
+			url = cleantitle.geturl(tvshowtitle)
+			return url
+		except:
+			return
+
+	def episode(self, url, imdb, tvdb, title, premiered, season, episode):
+		try:
+			if not url:
+				return
+			tvshowtitle = url
+			url = self.base_link + '/episode/%s-season-%s-episode-%s/' % (tvshowtitle, season, episode)
+			return url
 		except:
 			return
 
 	def sources(self, url, hostDict, hostprDict):
 		try:
 			sources = []
-			hostDict = hostDict + hostprDict
 			if url is None:
 				return sources
-			html = client.request(url)
-			links = re.compile('<div class="link_go">.+?<a href="(.+?)" target="_blank">', re.DOTALL).findall(html)
-			for link in links:
-				valid, host = source_utils.is_host_valid(link, hostDict)
+			r = client.request(url)
+			match = re.compile('<iframe src=".+?//(.+?)/(.+?)"').findall(r)
+			for host, url in match:
+				url = 'https://%s/%s' % (host, url)
+				host = host.replace('www.', '')
+				valid, host = source_utils.is_host_valid(host, hostDict)
 				if valid:
-					quality, info = source_utils.get_release_quality(link, link)
-					sources.append({'source': host, 'quality': quality, 'language': 'en', 'url': link, 'info': info,
+					quality, info = source_utils.get_release_quality(url, url)
+					sources.append({'source': host, 'quality': quality, 'language': 'en', 'url': url, 'info': info,
 					                'direct': False, 'debridonly': False})
 			return sources
 		except:

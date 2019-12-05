@@ -11,25 +11,20 @@
 # Addon id: script.module.fuzzybritches_v2
 # Addon Provider: The Papaw
 
-import re
-
-from resources.lib.modules import cfscrape
 from resources.lib.modules import cleantitle
-from resources.lib.modules import source_utils
+from resources.lib.modules import more_sources
 
 
 class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['seehd.pl']
-		self.base_link = 'http://www.seehd.pl'
-		self.search_link = '/%s-%s-watch-online/'
+		self.base_link = 'https://gomostream.com'
 
 	def movie(self, imdb, title, localtitle, aliases, year):
 		try:
-			title = cleantitle.geturl(title)
-			url = self.base_link + self.search_link % (title, year)
+			mTitle = cleantitle.geturl(title)
+			url = self.base_link + '/movie/' + mTitle
 			return url
 		except:
 			return
@@ -45,11 +40,7 @@ class source:
 		try:
 			if not url:
 				return
-			title = url
-			season = '%02d' % int(season)
-			episode = '%02d' % int(episode)
-			se = 's%se%s' % (season, episode)
-			url = self.base_link + self.search_link % (title, se)
+			url = self.base_link + '/show/' + url + '/' + season + '-' + episode
 			return url
 		except:
 			return
@@ -57,19 +48,12 @@ class source:
 	def sources(self, url, hostDict, hostprDict):
 		try:
 			sources = []
-			hostDict = hostprDict + hostDict
-			scraper = cfscrape.create_scraper()
-			r = scraper.get(url).content
-			match = re.compile('<iframe.+?src="(.+?)://(.+?)/(.+?)"').findall(r)
-			for http, host, url in match:
-				host = host.replace('www.', '')
-				url = '%s://%s/%s' % (http, host, url)
-				valid, host = source_utils.is_host_valid(url, hostDict)
-				if valid:
-					sources.append({'source': host, 'quality': '720p', 'language': 'en', 'url': url, 'direct': False,
-					                'debridonly': False})
+			if url is None:
+				return sources
+			for source in more_sources.more_gomo(url, hostDict):
+				sources.append(source)
 			return sources
-		except Exception:
+		except:
 			return sources
 
 	def resolve(self, url):

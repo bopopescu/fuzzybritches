@@ -15,7 +15,6 @@ import re
 import urllib
 import urlparse
 
-from resources.lib.modules import cfscrape
 from resources.lib.modules import cleantitle
 from resources.lib.modules import client
 from resources.lib.modules import debrid
@@ -26,10 +25,12 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['twoddl.net', '2ddl.vg']
-		self.base_link = 'https://2ddl.vg'
-		self.search_link = '/?s=%s'
-		self.scraper = cfscrape.create_scraper()
+		self.domains = ['myvideolinks.net', 'new.myvideolinks.net']
+		# self.base_link = 'http://myvideolinks.net'
+		self.base_link = 'http://search.myvideolinks.net/'
+		# self.search_link = 'rls/?s=%s'
+		# self.search_link = '/ups/?s=%s'
+		self.search_link = '?s=%s'
 
 
 	def movie(self, imdb, title, localtitle, aliases, year):
@@ -73,8 +74,6 @@ class source:
 			if debrid.status() is False:
 				return sources
 
-			hostDict = hostprDict + hostDict
-
 			data = urlparse.parse_qs(url)
 			data = dict([(i, data[i][0]) if data[i] else (i, '') for i in data])
 
@@ -86,83 +85,102 @@ class source:
 			query = '%s %s' % (title, hdlr)
 			query = re.sub('(\\\|/| -|:|;|\*|\?|"|\'|<|>|\|)', '', query)
 
-			url = self.search_link % urllib.quote_plus(query)
-			url = urlparse.urljoin(self.base_link, url).replace('-', '+')
+			url = urlparse.urljoin(self.base_link, self.search_link)
+			# url = url % urllib.quote_plus(query)
+			url = url % urllib.quote(query)
 			# log_utils.log('url = %s' % url, log_utils.LOGDEBUG)
 
 			r = client.request(url)
-			# r = self.scraper.get(url).content
+			r = client.parseDOM(r, 'h2')
 
-			if r is None and 'tvshowtitle' in data:
-				season = re.search('S(.*?)E', hdlr)
-				season = season.group(1)
-				url = title
-				# r = self.scraper.get(url).content
-				r = client.request(url)
+			# z = zip(client.parseDOM(r, 'a', ret='href'), client.parseDOM(r, 'a', ret='title'))
+			z = zip(client.parseDOM(r, 'a', ret='href'), client.parseDOM(r, 'a'))
 
+			if 'tvshowtitle' in data:
+				posts = [(i[1], i[0]) for i in z]
+			else:
+				posts = [(i[1], i[0]) for i in z]
 
-			for loopCount in range(0,2):
-				if loopCount == 1 or (r is None and 'tvshowtitle' in data):
-					r = self.scraper.get(url).content
-					# r = client.request(url)
-				posts = client.parseDOM(r, "div", attrs={"class": "postpage_movie_download"})
+			hostDict = hostprDict + hostDict
 
-				items = []
-				for post in posts:
+			items = []
+
+			for post in posts:
+				try:
 					try:
-						u = client.parseDOM(post, 'a', ret='href')
-
-						for i in u:
-							name = str(i)
-							items.append(name)
+						t = post[0].encode('utf-8')
 					except:
+						t = post[0]
+
+					u = client.request(post[1])
+
+					u = re.findall('\'(http.+?)\'', u) + re.findall('\"(http.+?)\"', u)
+					u = [i for i in u if '/embed/' not in i]
+					u = [i for i in u if 'youtube' not in i]
+
+					try:
+						s = re.search('((?:\d+\.\d+|\d+\,\d+|\d+)\s*(?:GB|GiB|MB|MiB))', post)
+						s = s.groups()[0] if s else '0'
+					except:
+						s = '0'
 						pass
-				if len(items) > 0:
-					break
+
+					items += [(t, i, s) for i in u]
+
+				except:
+					source_utils.scraper_error('MYVIDEOLINK')
+					pass
 
 			for item in items:
 				try:
-					i = str(item)
-					# r = self.scraper.get(i).content
-					r = client.request(i)
-					if r is None:
+					url = item[1]
+
+					url = client.replaceHTMLCodes(url)
+					url = url.encode('utf-8')
+
+					void = ('.rar', '.zip', '.iso', '.part', '.png', '.jpg', '.bmp', '.gif')
+					if url.endswith(void):
 						continue
 
-					tit = client.parseDOM(r, 'meta', attrs={'property': 'og:title'}, ret='content')[0]
-					t = tit.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
+					valid, host = source_utils.is_host_valid(url, hostDict)
+					if not valid:
+						continue
+
+					host = client.replaceHTMLCodes(host)
+					host = host.encode('utf-8')
+
+					name = item[0]
+					name = client.replaceHTMLCodes(name)
+
+					t = name.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
 					if cleantitle.get(t) != cleantitle.get(title):
 						continue
 
-					if hdlr not in tit:
+					if hdlr not in name:
 						continue
 
-					u = client.parseDOM(r, "div", attrs={"class": "multilink_lnks"})
+					quality, info = source_utils.get_release_quality(name, url)
 
-					for t in u:
+					try:
+						size = re.findall('((?:\d+\.\d+|\d+\,\d+|\d+) (?:GB|GiB|MB|MiB))', item[2])[-1]
+						div = 1 if size.endswith(('GB', 'GiB')) else 1024
+						size = float(re.sub('[^0-9|/.|/,]', '', size)) / div
+						size = '%.2f GB' % size
+						info.append(size)
+					except:
+						pass
 
-						r = client.parseDOM(t, 'a', ret='href')
+					info = ' | '.join(info)
 
-						for url in r:
-							if 'www.share-online.biz' in url:
-								continue
-
-							if url in str(sources):
-								continue
-
-							quality, info = source_utils.get_release_quality(url, url)
-
-							valid, host = source_utils.is_host_valid(url, hostDict)
-
-							if valid:
-								sources.append({'source': host, 'quality': quality, 'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True})
+					sources.append({'source': host, 'quality': quality, 'language': 'en', 'url': url,
+												'info': info, 'direct': False, 'debridonly': True})
 				except:
-					source_utils.scraper_error('2DDL')
+					source_utils.scraper_error('MYVIDEOLINK')
 					pass
 
 			return sources
-
 		except:
-			source_utils.scraper_error('2DDL')
+			source_utils.scraper_error('MYVIDEOLINK')
 			return sources
 
 
