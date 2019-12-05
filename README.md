@@ -2,7 +2,8 @@
 This repository is primarily for the development of PSMC/Kodi addons forked, modified, created, designed or hosted by "The Papaw".
 All items hosted here are for learning and educational purposes only. They include:
 
-• <B>Fuzzy Britches</B> (Exodus type)<BR>
+• <B>Fuzzy Britches v2</B> (Exodus type). <BR>
+• <B>Fuzzy Britches</B> (Exodus type) ***Discontinued support** (replaced with Fuzzy Britches v2). <BR>
 • <B>Kids Cove</B> (Jen based)<BR>
 • <B>PSMC Maintenance</B> (Maintenance Program)<BR>
 • <B>Various Skins - see below</B> (Usually forked from the Aeon-nox Sylvo v7.0.1 skin)<BR>
@@ -36,7 +37,7 @@ If you have issues, please post them here. All items are still being developed a
 
   
 To Install:
-1. Download the repository. <a href="https://github.com/ThePapaw/fuzzybritches/blob/master/_zips/repository.fuzzybritches/repository.fuzzybritches-1.0.13.zip?raw=true">CLICK HERE</a>
+1. Download the repository. <a href="https://github.com/ThePapaw/fuzzybritches/blob/master/_zips/repository.fuzzybritches/repository.fuzzybritches-1.0.15.zip?raw=true">CLICK HERE</a>
 
 2. Install "from zip file" in Kodi as you would any other downloaded addon.
 
