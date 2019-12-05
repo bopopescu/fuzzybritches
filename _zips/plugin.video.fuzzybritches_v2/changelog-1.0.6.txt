@@ -1,6 +1,6 @@
 [B][COLOR deepskyblue]                                  ••••• [/COLOR][/B][B][COLOR yellow] LATEST NEWS [/COLOR][/B][B][COLOR deepskyblue] •••••[/COLOR][/B]
 
-[B][COLOR deepskyblue]• [/COLOR][/B][COLOR deepskyblue]CURRENT STATUS:[/COLOR][COLOR orange] Good[/COLOR][COLOR darkcyan] (USTVGo isn't working in IPTV ssection)[/COLOR] 
+[B][COLOR deepskyblue]• [/COLOR][/B][COLOR deepskyblue]CURRENT STATUS:[/COLOR][COLOR orange] Good[/COLOR][COLOR darkcyan] (USTVGo isn't working in IPTV section)[/COLOR] 
 [COLOR deepskyblue]********************************************************************************************[/COLOR]
 [B][COLOR limegreen]v1.0.6 (12-05-19)[/COLOR][/B]
 [B][COLOR deepskyblue]• [/COLOR][/B] Worked on Art
