@@ -27,8 +27,8 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['twoddl.net', '2ddl.vg']
-		self.base_link = 'https://2ddl.vg'
+		self.domains = ['onceddl.net','twoddl.net', '2ddl.vg']
+		self.base_link = 'https://onceddl.net
 		self.search_link = '/?s=%s'
 		self.scraper = cfscrape.create_scraper()
 

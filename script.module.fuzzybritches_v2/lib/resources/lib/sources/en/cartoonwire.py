@@ -21,7 +21,7 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['cartoonwire.to']
+		self.domains = ['cartoonwire.to', 'watchcartoononline.info']
 		self.base_link = 'https://cartoonwire.to'
 		self.search_link = '/episode/%s-season-%s-episode-%s/'
 

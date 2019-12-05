@@ -1,4 +1,4 @@
-<addon id="script.module.fuzzybritches_v2" name="[COLOR orange]Fuzzy Britches v2 Module[/COLOR]" provider-name="The Papaw" version="1.0.3">
+<addon id="script.module.fuzzybritches_v2" name="[COLOR orange]Fuzzy Britches v2 Module[/COLOR]" provider-name="The Papaw" version="1.0.4">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.beautifulsoup4" />
@@ -22,5 +22,6 @@
 	      <icon>icon.png</icon>
 		  <fanart>fanart.jpg</fanart>
 		</assets>
+		<news>[COLOR FF00D5FF]- Fixed some artork.[/COLOR][CR]- Done some scraper work[CR]- Inital release </news>
     </extension>
 </addon>

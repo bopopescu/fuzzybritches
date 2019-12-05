@@ -19,7 +19,8 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.base_link = 'https://gomostream.com'
+		self.domains = ['gomo.to']
+		self.base_link = 'https://gomo.to'
 
 	def movie(self, imdb, title, localtitle, aliases, year):
 		try:

@@ -22,9 +22,9 @@ from resources.lib.modules import source_utils
 class source:
 	def __init__(self):
 		self.priority = 1
-		self.language = ['en']  # Old/Dead  alluc.xyz
-		self.domains = ['alluc.co']
-		self.base_link = 'https://alluc.co'
+		self.language = ['en']
+		self.domains = ['alluc.fun', 'alluc.co', 'alluc.xyz']
+		self.base_link = 'https://alluc.fun'
 		self.search_link = '/?s=%s'
 		self.scraper = cfscrape.create_scraper()
 

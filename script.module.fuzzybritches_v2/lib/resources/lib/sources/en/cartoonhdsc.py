@@ -23,8 +23,8 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['cartoonhd.to']
-		self.base_link = 'https://www.cartoonhd.to'
+		self.domains = ['cartoonhd.sc', 'cartoonhd.to']
+		self.base_link = 'https://www.cartoonhd.sc'
 		self.search_link = '/?s=%s'
 		self.scraper = cfscrape.create_scraper()
 

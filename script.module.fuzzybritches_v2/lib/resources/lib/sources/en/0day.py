@@ -19,6 +19,8 @@ from resources.lib.modules import cfscrape
 from resources.lib.modules import client
 from resources.lib.modules import debrid
 from resources.lib.modules import source_utils
+import traceback
+from resources.lib.modules import log_utils
 
 
 class source:
