@@ -1,0 +1,29 @@
+[B][COLOR deepskyblue]                                  ••••• [/COLOR][/B][B][COLOR yellow] LATEST NEWS [/COLOR][/B][B][COLOR deepskyblue] •••••[/COLOR][/B]
+
+[B][COLOR deepskyblue]• [/COLOR][/B][COLOR deepskyblue]CURRENT STATUS:[/COLOR][COLOR orange] Good[/COLOR][COLOR darkcyan] (USTVGo isn't working in IPTV section)[/COLOR] 
+[COLOR deepskyblue]********************************************************************************************[/COLOR]
+[B][COLOR limegreen]v1.0.7 (12-24-19)[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Worked on scrapers
+
+[B][COLOR limegreen]v1.0.6 (12-05-19)[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Worked on Art
+[B][COLOR deepskyblue]• [/COLOR][/B] Worked on scrapers
+
+[B][COLOR limegreen]v1.0.5 (12-02-19)[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic fixes
+
+[B][COLOR limegreen]v1.0.4 (11-30-19)[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic fixes
+
+[B][COLOR limegreen]v1.0.3 (11-28-19)[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic fixes
+
+[B][COLOR limegreen]v1.0.2 (11-28-19)[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Cosmetic fixes
+
+[B][COLOR limegreen]v1.0.1 (11-26-19)[/COLOR][/B]
+[B][COLOR deepskyblue]• [/COLOR][/B] Initial release
+
+
+
+
