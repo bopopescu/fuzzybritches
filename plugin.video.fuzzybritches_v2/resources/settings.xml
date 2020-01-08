@@ -152,11 +152,13 @@
         <setting id="provider.myswatchseri" type="bool" label="provider.myswatchseri" default="true" />
         <setting id="provider.mywatchep4" type="bool" label="provider.mywatchep4" default="true" />
         <setting id="provider.mywatchepseries" type="bool" label="provider.mywatchepseries" default="true" />
+        <setting id="provider.primewire" type="bool" label="provider.primewire" default="true" />
+        <setting id="provider.projectfreetv" type="bool" label="provider.projectfreetv" default="true" />
         <setting id="provider.putlockerfree" type="bool" label="provider.putlockerfree" default="true" />
         <setting id="provider.putlockersio" type="bool" label="provider.putlockersio" default="true" />
         <setting id="provider.putlockersonline" type="bool" label="provider.putlockersonline" default="true" />
         <setting id="provider.putlockersplus" type="bool" label="provider.putlockersplus" default="true" />
-        <setting id="provider.rarefilmm" type="bool" label="provider.rarefilmm" default="true" />
+        <setting id="provider.rmz" type="bool" label="provider.rmz" default="true" />
         <setting id="provider.seehd" type="bool" label="provider.seehd" default="true" />
         <setting id="provider.series9" type="bool" label="provider.series9" default="true" />
         <setting id="provider.seriesfree" type="bool" label="provider.seriesfree" default="true" />
@@ -183,22 +185,22 @@
         <setting label="English---Debrid/Prem (Mixed Results)" type="lsep" />
         <setting label="Disable All Debrid Providers" type="action" option="close" action="RunPlugin(plugin://plugin.video.fuzzybritches_v2/?mode=toggleAllDebrid&amp;setting=false&amp;openSettings&amp;query=4.0)"/>
         <setting label="Enable All Debrid Providers" type="action" option="close" action="RunPlugin(plugin://plugin.video.fuzzybritches_v2/?mode=toggleAllDebrid&amp;setting=true&amp;openSettings&amp;query=4.0)"/>
-        <setting id="provider.0day" type="bool" label="provider.0day" default="false" />
-        <setting id="provider.2ddl" type="bool" label="provider.2ddl" default="false" />
-        <setting id="provider.300mbdownload" type="bool" label="provider.300mbdownload" default="false" />
-        <setting id="provider.300mbfilms" type="bool" label="provider.300mbfilms" default="false" />
-        <setting id="provider.ddlspot" type="bool" label="provider.ddlspot" default="false" />
-        <setting id="provider.directdl" type="bool" label="provider.directdl" default="false" />
-        <setting id="provider.maxrls" type="bool" label="provider.maxrls" default="false" />
-        <setting id="provider.mvrls" type="bool" label="provider.mvrls" default="false" />
-        <setting id="provider.rapidmoviez" type="bool" label="provider.rapidmoviez" default="false" />
-        <setting id="provider.rlsb" type="bool" label="provider.rlsb" default="false" />
-        <setting id="provider.rlsbb" type="bool" label="provider.rlsbb" default="false" />
-        <setting id="provider.sceneddl" type="bool" label="provider.sceneddl" default="false" />
-        <setting id="provider.scenerls" type="bool" label="provider.scenerls" default="false" />
-        <setting id="provider.tvdownload" type="bool" label="provider.tvdownload" default="false" />
-        <setting id="provider.ultrahdindir" type="bool" label="provider.ultrahdindir" default="false" />
-        <setting id="provider.warezmovies" type="bool" label="provider.warezmovies" default="false" />
+        <setting id="provider.0day" type="bool" label="provider.0day" default="true" />
+        <setting id="provider.2ddl" type="bool" label="provider.2ddl" default="true" />
+        <setting id="provider.300mbdownload" type="bool" label="provider.300mbdownload" default="true" />
+        <setting id="provider.300mbfilms" type="bool" label="provider.300mbfilms" default="true" />
+        <setting id="provider.ddlspot" type="bool" label="provider.ddlspot" default="true" />
+        <setting id="provider.directdl" type="bool" label="provider.directdl" default="true" />
+        <setting id="provider.maxrls" type="bool" label="provider.maxrls" default="true" />
+        <setting id="provider.mvrls" type="bool" label="provider.mvrls" default="true" />
+        <setting id="provider.rapidmoviez" type="bool" label="provider.rapidmoviez" default="true" />
+        <setting id="provider.rlsb" type="bool" label="provider.rlsb" default="true" />
+        <setting id="provider.rlsbb" type="bool" label="provider.rlsbb" default="true" />
+        <setting id="provider.sceneddl" type="bool" label="provider.sceneddl" default="true" />
+        <setting id="provider.scenerls" type="bool" label="provider.scenerls" default="true" />
+        <setting id="provider.tvdownload" type="bool" label="provider.tvdownload" default="true" />
+        <setting id="provider.ultrahdindir" type="bool" label="provider.ultrahdindir" default="true" />
+        <setting id="provider.warezmovies" type="bool" label="provider.warezmovies" default="true" />
         <setting label="English---Spares (Also Toon/Anime Type)" type="lsep" />
         <setting label="Disable All Spare Providers" type="action" option="close" action="RunPlugin(plugin://plugin.video.fuzzybritches_v2/?mode=toggleAllSpares&amp;setting=false&amp;openSettings&amp;query=4.0)"/>
         <setting label="Enable All Spare Providers" type="action" option="close" action="RunPlugin(plugin://plugin.video.fuzzybritches_v2/?mode=toggleAllSpares&amp;setting=true&amp;openSettings&amp;query=4.0)"/>
