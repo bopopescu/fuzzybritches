@@ -1,6 +1,9 @@
 """
-    plugin for ResolveURL
-    Copyright (C) 2020 gujal
+    OVERALL CREDIT TO:
+        t0mm0, Eldorado, VOINAGE, BSTRDMKR, tknorris, smokdpi, TheHighway
+
+    resolveurl XBMC Addon
+    Copyright (C) 2011 t0mm0
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,34 +19,31 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 import re
-import json
 from lib import helpers
 from resolveurl import common
 from resolveurl.resolver import ResolveUrl, ResolverError
 
 
-class UpToBoxResolver(ResolveUrl):
-    name = "uptobox"
-    domains = ["uptobox.com", "uptostream.com"]
-    pattern = r'(?://|\.)(uptobox.com|uptostream.com)/(?:iframe/)?([0-9A-Za-z_]+)'
+class VidZellaResolver(ResolveUrl):
+    name = "vidzella"
+    domains = ['vidzella.me', 'dl.vidzella.me']
+    pattern = '(?://|\.)(vidzella.me)/(?:e/|play/?#|stream\.php\?stream=)([0-9a-zA-Z]+)'
 
     def __init__(self):
         self.net = common.Net()
-
+    
     def get_media_url(self, host, media_id):
         web_url = self.get_url(host, media_id)
-        headers = {'User-Agent': common.FF_USER_AGENT}
+        headers = {'User-Agent': common.RAND_UA}
         html = self.net.http_GET(web_url, headers=headers).content
 
-        if 'Not Found' in html:
-            raise ResolverError('File Removed')
+        if html:
+            source = re.search("""<source\s+src\s*=\s*["']([^"']+)""", html)
+            if source:
+                headers.update({'Referer': web_url})
+                return self.net.http_GET(source.group(1), headers=headers).get_url() + helpers.append_headers(headers)
 
-        packed = re.search(r"atob\('([^']+)", html)
-        if packed:
-            vidurl = json.loads(packed.group(1).decode('base64'))[0].get('src')
-            return vidurl + helpers.append_headers(headers)
-
-        raise ResolverError('Video not found')
-
+        raise ResolverError('File Not Found')
+    
     def get_url(self, host, media_id):
-        return self._default_get_url(host, media_id, template='https://uptostream.com/iframe/{media_id}')
+        return self._default_get_url(host, media_id, template='https://{host}/e/{media_id}')

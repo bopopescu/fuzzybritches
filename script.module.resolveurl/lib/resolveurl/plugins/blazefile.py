@@ -1,6 +1,6 @@
 """
-    plugin for ResolveURL
-    Copyright (C) 2020 gujal
+    Kodi resolveurl plugin
+    Copyright (C) 2016  tknorris
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,11 +17,10 @@
 """
 from __resolve_generic__ import ResolveGeneric
 
-
-class EnterVideoResolver(ResolveGeneric):
-    name = "entervideo"
-    domains = ['entervideo.net', 'eplayvid.com']
-    pattern = r'(?://|\.)((?:entervideo|eplayvid)\.(?:com|net))/(?:watch/)?([0-9a-zA-Z]+)'
+class BlazefileResolver(ResolveGeneric):
+    name = 'blazefile'
+    domains = ['blazefile.co']
+    pattern = '(?://|\.)(blazefile\.co)/(?:embed-)?([0-9a-zA-Z]+)'
 
     def get_url(self, host, media_id):
-        return self._default_get_url(host, media_id, template='http://eplayvid.com/watch/{media_id}')
+        return 'https://www.blazefile.co/embed-%s.html' % (media_id)
