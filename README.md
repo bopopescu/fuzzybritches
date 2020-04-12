@@ -23,8 +23,6 @@ Most of them now include <B>Home Screen Animation</B> (can be toggled off), addi
 • <B>PSMC's Spiderman Skin</B> - Updated and redesigned (includes animations & GUI sounds). <BR>
 • <B>PSMC's Man of Steel Skin</B> - Updated and redesigned (includes animations & GUI sounds)<BR>
 • <B>PSMC's Super Mario Galaxy Skin</B> - Updated and redesigned (includes animations & GUI sounds). <BR>
-
-*Newly Added Skins:* <BR>
 • <B>PSMC's Batman Skin</B> - ***NEW Design** (includes animations & GUI sounds). <BR>
 • <B>PSMC's Scooby-Doo Skin</B> - ***NEW Design** (includes animations & GUI sounds). <BR>
 • <B>PSMC's Toy Story Skin</B> - ***NEW Design** (includes animations & GUI sounds). <BR>
@@ -37,7 +35,7 @@ If you have issues, please post them here. All items are still being developed a
 
   
 To Install:
-1. Download the repository. <a href="https://github.com/ThePapaw/fuzzybritches/blob/master/_zips/repository.fuzzybritches/repository.fuzzybritches-1.0.15.zip?raw=true">CLICK HERE</a>
+1. Download the repository. <a href="https://github.com/ThePapaw/fuzzybritches/blob/master/_zips/repository.fuzzybritches/repository.fuzzybritches-1.0.20.zip?raw=true">CLICK HERE</a>
 
 2. Install "from zip file" in Kodi as you would any other downloaded addon.
 
