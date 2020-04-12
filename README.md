@@ -40,7 +40,7 @@ To Install:
 
 3. After the repo is installed, install the addon(s) of your choosing from the Fuzzy Britches Repo.
 
-Discontinued Addons
+Discontinued Addons<BR>
 • <B>Fuzzy Britches v2</B> (Exodus type). (***Discontinued support**) <BR>
 • <B>Fuzzy Britches</B> (Exodus type). (***Discontinued support**) <BR>
 
