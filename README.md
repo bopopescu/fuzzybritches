@@ -38,7 +38,7 @@ To Install:
 
 2. Install "from zip file" in Kodi as you would any other downloaded addon.
 
-3. After the repo is installed, install the addon(s) of your choosing from the Fuzzy Britches Repo.
+3. After the repo is installed, install the addon(s) of your choosing from the Fuzzy Britches Repo. If you would like to try PSMC, just install the PSMC repo from the Fuzzy Britches repo.
 
 Discontinued Addons<BR>
 • <B>Fuzzy Britches v2</B> (Exodus type). (***Discontinued support**) <BR>
