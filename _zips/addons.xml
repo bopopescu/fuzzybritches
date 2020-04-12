@@ -242,7 +242,7 @@ Please give credit to all the devolopers that have and do contribute to this add
     </extension>
 </addon>
 
-    <addon id="repository.fuzzybritches" name="Fuzzy Britches Repository" version="1.0.16" provider-name="The Papaw">
+    <addon id="repository.fuzzybritches" name="Fuzzy Britches Repository" version="1.0.17" provider-name="The Papaw">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
@@ -270,7 +270,6 @@ Please give credit to all the devolopers that have and do contribute to this add
 			<video_guide></video_guide>
 		<assets>
 			<icon>icon.png</icon>
-			<icon>icon.gif</icon>
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>[COLOR yellow]All Skins updated and completely redesigned[/COLOR][CR]- [COLOR yellow]NEW Animated skins added![/COLOR][CR]- [COLOR yellow]Added Fuzzy Britches v2[/COLOR]</news>
