@@ -771,7 +771,7 @@ Please give credit to all the devolopers that have and do contribute to this add
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.42" provider-name="jsergio">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.44" provider-name="jsergio, gujal">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="plugin.video.youtube" optional="true" />
