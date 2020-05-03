@@ -864,7 +864,7 @@ Please give credit to all the devolopers that have and do contribute to this add
         </extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver (no indigo install)" version="5.0.62" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver (no force indigo install)" version="5.0.65" provider-name="safe modded version">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="plugin.video.youtube" optional="true" />
@@ -882,8 +882,6 @@ Please give credit to all the devolopers that have and do contribute to this add
         <summary lang="el">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
         <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
         <description lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
-        <forum>https://www.tvaddons.co/forums</forum>
-        <website>https://www.tvaddons.co</website>
     </extension>
 </addon>
 
