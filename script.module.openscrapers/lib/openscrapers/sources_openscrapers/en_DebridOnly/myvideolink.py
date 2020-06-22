@@ -9,22 +9,6 @@
 #  .##.....#.##.......##......##...##.##....#.##....#.##....##.##.....#.##.......##......##....##.##....##
 #  ..#######.##.......#######.##....#..######..######.##.....#.##.....#.##.......#######.##.....#..######.
 
-'''
-    OpenScrapers Project
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-'''
-
 import re
 import urllib
 import urlparse
@@ -39,9 +23,9 @@ class source:
 	def __init__(self):
 		self.priority = 22
 		self.language = ['en']
-		self.domains = ['looka.myvideolinks.net', 'myvideolinks.69.mu', 'nothingcan.undo.it']
-		# self.base_link = 'http://kita.myvideolinks.net'
-		self.base_link = 'http://looka.myvideolinks.net'
+		self.domains = ['dls.myvideolinks.net', 'get.myvideolinks.net', 'go.myvideolinks.net', 'myvideolinks.69.mu',
+								'sag.myvideolinks.net', 'looka.myvideolinks.net', 'kita.myvideolinks.net']
+		self.base_link = 'https://dls.myvideolinks.net'
 		self.search_link = '/?s=%s'
 
 
@@ -78,6 +62,9 @@ class source:
 
 	def sources(self, url, hostDict, hostprDict):
 		try:
+			test = client.request(self.base_link)
+			new_search = client.parseDOM(test, 'form', ret='action')[0] # to try to combat their constant search link changes
+
 			sources = []
 
 			if url is None:
@@ -97,39 +84,42 @@ class source:
 			query = '%s %s' % (title, hdlr)
 			query = re.sub('(\\\|/| -|:|;|\*|\?|"|\'|<|>|\|)', '', query)
 
-			url = urlparse.urljoin(self.base_link, self.search_link)
+			# url = urlparse.urljoin(self.base_link, self.search_link)
+			url = urlparse.urljoin(new_search, self.search_link)
 			url = url % urllib.quote_plus(query)
-			# log_utils.log('url = %s' % url, log_utils.LOGDEBUG)
+			# log_utils.log('url = %s' % url, __name__, log_utils.LOGDEBUG)
 			r = client.request(url, timeout='5')
-			if r is None:
+			if not r:
 				return sources
 			if 'Nothing Found' in r:
 				return sources
 
 			r = client.parseDOM(r, 'article')
 			r1 = client.parseDOM(r, 'h2')
-			r2 = client.parseDOM(r, 'div', attrs={'class': 'entry-excerpt'})
+			# r2 = client.parseDOM(r, 'div', attrs={'class': 'entry-excerpt'})
 
 			if 'tvshowtitle' in data: # fuckers removed file size for episodes
-				posts = zip(client.parseDOM(r1, 'a', ret='href'), client.parseDOM(r1, 'a'))
+				posts = zip(client.parseDOM(r1, 'a', ret='href'), client.parseDOM(r1, 'a')) # keep for now case they bring size back
 			else:
 				posts = zip(client.parseDOM(r1, 'a', ret='href'), client.parseDOM(r1, 'a'))
 
 			hostDict = hostprDict + hostDict
-
 			items = []
 			for post in posts:
 				try:
 					base_u = client.request(post[0], timeout='5')
 					if 'tvshowtitle' in data:
-						regex = '<b>(' + title + '.*)</b>'
+						regex = '<h4>(' + title + '.+?)</h4>'
 						lists = zip(re.findall(regex, base_u), re.findall('<ul>(.+?)</ul>', base_u, re.DOTALL))
 						for links in lists:
 							u = re.findall('\'(http.+?)\'', links[1]) + re.findall('\"(http.+?)\"', links[1])
-							t = links[0]
+							t = links[0].replace('HDTV', '')
 							s = 0
 							items += [(t, i, s) for i in u]
 					else:
+						byline = client.parseDOM(base_u, 'div', attrs={'class': 'entry-byline cf'})
+						if 'TV SHOWS' in str(byline):
+							continue
 						list = client.parseDOM(base_u, 'div', attrs={'class': 'entry-content cf'})
 						u = client.parseDOM(list, 'ul')[0]
 						u = re.findall('\'(http.+?)\'', u) + re.findall('\"(http.+?)\"', u)
@@ -171,7 +161,8 @@ class source:
 					try:
 						size = item[2]
 						dsize, isize = source_utils._size(size)
-						info.insert(0, isize)
+						if isize:
+							info.insert(0, isize)
 					except:
 						dsize = 0
 						pass
@@ -179,6 +170,7 @@ class source:
 					fileType = source_utils.getFileType(name)
 					info.append(fileType)
 					info = ' | '.join(info) if fileType else info[0]
+
 					sources.append({'source': host, 'quality': quality, 'language': 'en', 'url': url,
 												'info': info, 'direct': False, 'debridonly': True, 'size': dsize})
 				except:

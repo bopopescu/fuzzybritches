@@ -1,8 +1,31 @@
+# ------------------------------------------------------------------------------- #
+
 import logging
 import re
+import requests
 import sys
 import ssl
-import requests
+
+from collections import OrderedDict
+from copy import deepcopy
+
+from requests.adapters import HTTPAdapter
+from requests.sessions import Session
+
+try:
+	from requests_toolbelt.utils import dump
+except:
+	import dump
+	pass
+
+from time import sleep
+
+# ------------------------------------------------------------------------------- #
+
+try:
+    import brotli
+except ImportError:
+    pass
 
 try:
     import copyreg
@@ -17,12 +40,12 @@ except ImportError:
     else:
         from html.parser import HTMLParser
 
-from copy import deepcopy
-from time import sleep
-from collections import OrderedDict
+try:
+    from urlparse import urlparse, urljoin
+except ImportError:
+    from urllib.parse import urlparse, urljoin
 
-from requests.sessions import Session
-from requests.adapters import HTTPAdapter
+# ------------------------------------------------------------------------------- #
 
 from .exceptions import (
     CloudflareLoopProtection,
@@ -37,25 +60,9 @@ from .interpreters import JavaScriptInterpreter
 from .reCaptcha import reCaptcha
 from .user_agent import User_Agent
 
-try:
-    from requests_toolbelt.utils import dump
-except ImportError:
-    pass
-
-try:
-    import brotli
-except ImportError:
-    pass
-
-try:
-    from urlparse import urlparse, urljoin
-except ImportError:
-    from urllib.parse import urlparse, urljoin
-
-
 # ------------------------------------------------------------------------------- #
 
-__version__ = '1.2.39'
+__version__ = '1.2.41'
 
 # ------------------------------------------------------------------------------- #
 
@@ -68,12 +75,23 @@ class CipherSuiteAdapter(HTTPAdapter):
         'config',
         '_pool_connections',
         '_pool_maxsize',
-        '_pool_block'
+        '_pool_block',
+        'source_address'
     ]
 
     def __init__(self, *args, **kwargs):
         self.ssl_context = kwargs.pop('ssl_context', None)
         self.cipherSuite = kwargs.pop('cipherSuite', None)
+        self.source_address = kwargs.pop('source_address', None)
+
+        if self.source_address:
+            if isinstance(self.source_address, str):
+                self.source_address = (self.source_address, 0)
+
+            if not isinstance(self.source_address, tuple):
+                raise TypeError(
+                    "source_address must be IP address string or (ip, port) tuple"
+                )
 
         if not self.ssl_context:
             self.ssl_context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
@@ -87,12 +105,14 @@ class CipherSuiteAdapter(HTTPAdapter):
 
     def init_poolmanager(self, *args, **kwargs):
         kwargs['ssl_context'] = self.ssl_context
+        kwargs['source_address'] = self.source_address
         return super(CipherSuiteAdapter, self).init_poolmanager(*args, **kwargs)
 
     # ------------------------------------------------------------------------------- #
 
     def proxy_manager_for(self, *args, **kwargs):
         kwargs['ssl_context'] = self.ssl_context
+        kwargs['source_address'] = self.source_address
         return super(CipherSuiteAdapter, self).proxy_manager_for(*args, **kwargs)
 
 # ------------------------------------------------------------------------------- #
@@ -107,6 +127,10 @@ class CloudScraper(Session):
         self.ssl_context = kwargs.pop('ssl_context', None)
         self.interpreter = kwargs.pop('interpreter', 'native')
         self.recaptcha = kwargs.pop('recaptcha', {})
+        self.requestPreHook = kwargs.pop('requestPreHook', None)
+        self.requestPostHook = kwargs.pop('requestPostHook', None)
+        self.source_address = kwargs.pop('source_address', None)
+
         self.allow_brotli = kwargs.pop(
             'allow_brotli',
             True if 'brotli' in sys.modules.keys() else False
@@ -138,7 +162,8 @@ class CloudScraper(Session):
             'https://',
             CipherSuiteAdapter(
                 cipherSuite=self.cipherSuite,
-                ssl_context=self.ssl_context
+                ssl_context=self.ssl_context,
+                source_address=self.source_address
             )
         )
 
@@ -151,6 +176,13 @@ class CloudScraper(Session):
 
     def __getstate__(self):
         return self.__dict__
+
+    # ------------------------------------------------------------------------------- #
+    # Allow replacing actual web request call via subclassing
+    # ------------------------------------------------------------------------------- #
+
+    def perform_request(self, method, url, *args, **kwargs):
+        return super(CloudScraper, self).request(method, url, *args, **kwargs)
 
     # ------------------------------------------------------------------------------- #
     # Raise an Exception with no stacktrace and reset depth counter.
@@ -213,19 +245,46 @@ class CloudScraper(Session):
         if kwargs.get('proxies') and kwargs.get('proxies') != self.proxies:
             self.proxies = kwargs.get('proxies')
 
-        resp = self.decodeBrotli(
-            super(CloudScraper, self).request(method, url, *args, **kwargs)
+        # ------------------------------------------------------------------------------- #
+        # Pre-Hook the request via user defined function.
+        # ------------------------------------------------------------------------------- #
+
+        if self.requestPreHook:
+            (method, url, args, kwargs) = self.requestPreHook(
+                self,
+                method,
+                url,
+                *args,
+                **kwargs
+            )
+
+        # ------------------------------------------------------------------------------- #
+        # Make the request via requests.
+        # ------------------------------------------------------------------------------- #
+
+        response = self.decodeBrotli(
+            self.perform_request(method, url, *args, **kwargs)
         )
 
         # ------------------------------------------------------------------------------- #
-        # Debug request
+        # Debug the request via the Response object.
         # ------------------------------------------------------------------------------- #
 
         if self.debug:
-            self.debugRequest(resp)
+            self.debugRequest(response)
+
+        # ------------------------------------------------------------------------------- #
+        # Post-Hook the request aka Post-Hook the response via user defined function.
+        # ------------------------------------------------------------------------------- #
+
+        if self.requestPostHook:
+            response = self.requestPostHook(self, response)
+
+            if self.debug:
+                self.debugRequest(response)
 
         # Check if Cloudflare anti-bot is on
-        if self.is_Challenge_Request(resp):
+        if self.is_Challenge_Request(response):
             # ------------------------------------------------------------------------------- #
             # Try to solve the challenge and send it back
             # ------------------------------------------------------------------------------- #
@@ -239,12 +298,12 @@ class CloudScraper(Session):
 
             self._solveDepthCnt += 1
 
-            resp = self.Challenge_Response(resp, **kwargs)
+            response = self.Challenge_Response(response, **kwargs)
         else:
-            if not resp.is_redirect and resp.status_code not in [429, 503]:
+            if not response.is_redirect and response.status_code not in [429, 503]:
                 self._solveDepthCnt = 0
 
-        return resp
+        return response
 
     # ------------------------------------------------------------------------------- #
     # check if the response contains a valid Cloudflare challenge
@@ -375,7 +434,7 @@ class CloudScraper(Session):
                 )
 
             payload = OrderedDict()
-            for challengeParam in re.findall(r'^\s+<input\s(.*?)/>', formPayload['form'], re.M | re.S):
+            for challengeParam in re.findall(r'^\s*<input\s(.*?)/>', formPayload['form'], re.M | re.S):
                 inputPayload = dict(re.findall(r'(\S+)="(\S+)"', challengeParam))
                 if inputPayload.get('name') in ['r', 'jschl_vc', 'pass']:
                     payload.update({inputPayload['name']: inputPayload['value']})
@@ -485,7 +544,7 @@ class CloudScraper(Session):
             # ------------------------------------------------------------------------------- #
 
             resp = self.decodeBrotli(
-                super(CloudScraper, self).request(resp.request.method, resp.url, **kwargs)
+                self.perform_request(resp.request.method, resp.url, **kwargs)
             )
 
             if not self.is_reCaptcha_Challenge(resp):
@@ -654,7 +713,10 @@ class CloudScraper(Session):
                     'debug',
                     'delay',
                     'interpreter',
-                    'recaptcha'
+                    'recaptcha',
+                    'requestPreHook',
+                    'requestPostHook',
+                    'source_address'
                 ] if field in kwargs
             }
         )
