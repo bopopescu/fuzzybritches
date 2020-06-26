@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
+###############################################################################
+#                           "A BEER-WARE LICENSE"                             #
+# ----------------------------------------------------------------------------#
+# Feel free to do whatever you wish with this file. Since we most likey will  #
+# never meet, buy a stranger a beer. Give credit to ALL named, unnamed, past, #
+# present and future dev's of this & files like this. -Share the Knowledge!   #
+###############################################################################
+
+# Addon Name: Fuzzy Britches
+# Addon id: script.module.fuzzybritches
+# Addon Provider: The Papaw
 
 '''
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+Included with the Fuzzy Britches Add-on
 '''
 
 import re,urllib,urlparse
@@ -27,8 +27,8 @@ class source:
         self.priority = 1
         self.language = ['en']
         self.domains = ['my-project-free.tv']
-        self.base_link = 'https://www8.project-free-tv.ag/'
-        self.search_link = '/episode/%s-season-%s-episode-%s'
+        self.base_link = 'https://projecfreetv.co'
+        self.search_link = '/episode/%s-s%02de%02d'
 
     def tvshow(self, imdb, tvdb, tvshowtitle, localtvshowtitle, aliases, year):
         try:
@@ -52,7 +52,7 @@ class source:
             sources = []
             r = client.request(url)
             try:
-                data = re.compile("callvalue\('.+?','.+?','(.+?)://(.+?)/(.+?)'\)",re.DOTALL).findall(r)
+                data = re.compile('<a href="(.+?)" target="_blank" rel="nofollow" title.+?').findall(r)
                 for http,host,url in data:
                     url = '%s://%s/%s' % (http,host,url)
                     sources.append({

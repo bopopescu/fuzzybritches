@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
+###############################################################################
+#                           "A BEER-WARE LICENSE"                             #
+# ----------------------------------------------------------------------------#
+# Feel free to do whatever you wish with this file. Since we most likey will  #
+# never meet, buy a stranger a beer. Give credit to ALL named, unnamed, past, #
+# present and future dev's of this & files like this. -Share the Knowledge!   #
+###############################################################################
+
+# Addon Name: Fuzzy Britches
+# Addon id: script.module.fuzzybritches
+# Addon Provider: The Papaw
+
 '''
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+Included with the Fuzzy Britches Add-on
 '''
 
 import re, urllib, urlparse
@@ -20,13 +21,13 @@ from resources.lib.modules import client
 from resources.lib.modules import cfscrape
 
 
-class source:
+class s0urce:
     def __init__(self):
         self.priority = 1
         self.language = ['en']
         self.domains = ['btdb.eu']
-        self.base_link = 'https://btdb.eu/'
-        self.search_link = '?s=%s'
+        self.base_link = 'https://btdb.eu'
+        self.search_link = '/search/%s/'
         self.scraper = cfscrape.create_scraper()
 
     def movie(self, imdb, title, localtitle, aliases, year):
@@ -77,13 +78,15 @@ class source:
             query = re.sub('(\\\|/| -|:|;|\*|\?|"|\'|<|>|\|)', ' ', query)
 
             url = self.search_link % urllib.quote_plus(query)
-            url = urlparse.urljoin(self.base_link, url)
+            url = urlparse.urljoin(self.base_link, url).replace('+', '%20')
+
+            headers = {'Referer': self.base_link,'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0'}
 
             try:
-                r = self.scraper.get(url).content
-                posts = client.parseDOM(r, 'li')
+                r = self.scraper.get(url, headers=headers).content
+                posts = client.parseDOM(r, "div", attrs={"class": "media"})
                 for post in posts:
-                    link = re.findall('a title="Download using magnet" href="(magnet:.+?)"', post, re.DOTALL)
+                    link = re.findall('a href="(magnet:.+?)"', post, re.DOTALL)
                     try:
                         size = re.findall('((?:\d+\,\d+\.\d+|\d+\.\d+|\d+\,\d+|\d+)\s*(?:GiB|MiB|GB|MB))', post)[0]
                         div = 1 if size.endswith('GB') else 1024

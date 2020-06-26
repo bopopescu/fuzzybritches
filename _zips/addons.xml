@@ -95,7 +95,7 @@ Please give credit to all the devolopers that have and do contribute to this add
 	</extension>
 </addon>
 
-<addon id="plugin.video.fuzzybritches_v1" version="1.0.1" name="[COLOR orange]Fuzzy Britches v1[/COLOR]" provider-name="The Papaw">
+<addon id="plugin.video.fuzzybritches_v1" version="1.0.2" name="[COLOR orange]Fuzzy Britches v1[/COLOR]" provider-name="The Papaw">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
         <import addon="script.module.fuzzybritches_v1" />
@@ -647,7 +647,7 @@ Please give credit to all the devolopers that have and do contribute to this add
 	</extension>
 </addon>
 
-<addon id="script.module.fuzzybritches_v1" name="[COLOR orange]Fuzzy Britches v1 Module[/COLOR]" version="1.0.1" provider-name="The Papaw">
+<addon id="script.module.fuzzybritches_v1" name="[COLOR orange]Fuzzy Britches v1 Module[/COLOR]" version="1.0.2" provider-name="The Papaw">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
         <import addon="script.module.beautifulsoup4"/>

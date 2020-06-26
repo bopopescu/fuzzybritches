@@ -1,5 +1,19 @@
-# -*- coding: UTF-8 -*-
-# -Cleaned and Checked on 10-16-2019 by JewBMX in Scrubs.
+# -*- coding: utf-8 -*-
+###############################################################################
+#                           "A BEER-WARE LICENSE"                             #
+# ----------------------------------------------------------------------------#
+# Feel free to do whatever you wish with this file. Since we most likey will  #
+# never meet, buy a stranger a beer. Give credit to ALL named, unnamed, past, #
+# present and future dev's of this & files like this. -Share the Knowledge!   #
+###############################################################################
+
+# Addon Name: Fuzzy Britches
+# Addon id: script.module.fuzzybritches
+# Addon Provider: The Papaw
+
+'''
+Included with the Fuzzy Britches Add-on
+'''
 
 import re, requests, urllib, urlparse
 from resources.lib.modules import client
@@ -10,7 +24,7 @@ from resources.lib.modules import getSum
 from resources.lib.modules import source_utils
 
 
-class source:
+class s0urce:
     def __init__(self):
         self.priority = 1
         self.language = ['en']  # Old  watch-series.co  watch-series.ru  watch-series.live

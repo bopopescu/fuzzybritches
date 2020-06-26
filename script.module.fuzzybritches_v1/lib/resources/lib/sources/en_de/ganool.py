@@ -1,33 +1,34 @@
 # -*- coding: utf-8 -*-
+###############################################################################
+#                           "A BEER-WARE LICENSE"                             #
+# ----------------------------------------------------------------------------#
+# Feel free to do whatever you wish with this file. Since we most likey will  #
+# never meet, buy a stranger a beer. Give credit to ALL named, unnamed, past, #
+# present and future dev's of this & files like this. -Share the Knowledge!   #
+###############################################################################
+
+# Addon Name: Fuzzy Britches
+# Addon id: script.module.fuzzybritches
+# Addon Provider: The Papaw
 
 '''
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+Included with the Fuzzy Britches Add-on
 '''
 
 import re, urllib, urlparse
 from resources.lib.modules import cleantitle
+from resources.lib.modules import client
 from resources.lib.modules import source_utils
 from resources.lib.modules import debrid
 from resources.lib.modules import cfscrape
 
 
-class source:
+class s0urce:
     def __init__(self):
         self.priority = 1
         self.language = ['en']
         self.domains = ['ganool.ws', 'ganol.si', 'ganool123.com']
-        self.base_link = 'https://fmovies.tw'
+        self.base_link = 'https://idtube.ru'
         self.search_link = '/search/?q=%s'
         self.scraper = cfscrape.create_scraper()
 
@@ -50,14 +51,15 @@ class source:
             data = dict([(i, data[i][0]) if data[i] else (i, '') for i in data])
             q = '%s' % cleantitle.get_gan_url(data['title'])
             url = self.base_link + self.search_link % q
-            r = self.scraper.get(url).content
-            v = re.compile('<a href="(.+?)" class="ml-mask jt" title="(.+?)">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<span class=".+?">(.+?)</span>').findall(r)
+            headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'}
+            r = self.scraper.get(url, headers=headers).content
+            v = re.compile('<a href="(.+?)" class="ml-mask jt" title="(.+?)">\s+<span class=".+?">(.+?)</span>').findall(r)
             for url, check, quality in v:
                 t = '%s (%s)' % (data['title'], data['year'])
                 if t not in check:
                     raise Exception()
                 key = url.split('-hd')[1]
-                r = self.scraper.get('https://123movie.nu/moviedownload.php?q=' + key).content
+                r = self.scraper.get('https://idtube.ru/moviedownload.php?q=' + key).content
                 r = re.compile('<a rel=".+?" href="(.+?)" target=".+?">').findall(r)
                 for url in r:
                     if any(x in url for x in ['.rar']):
