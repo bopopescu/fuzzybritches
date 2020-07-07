@@ -720,7 +720,7 @@ Please give credit to all the devolopers that have and do contribute to this add
   </extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="0.0.2.005" provider-name="Addons4Kodi">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="0.0.2.007" provider-name="Addons4Kodi">
 	<requires>
 		<import addon="xbmc.python" version="2.25.0" />
 		<import addon="script.module.beautifulsoup4" />
@@ -747,13 +747,14 @@ Please give credit to all the devolopers that have and do contribute to this add
 			<screenshot></screenshot>
 		</assets>
 		<news>
-0.0.2.005
-- Update cfscrape to 1.2.41
-- Added option to Settings "Show Changelog"
-- Added option to Settings "Notify Me About Available Updates"
-- Removed SEEHD, v2 cloudflare challenge
-- Added new free hoster WATCHEPISODESERIES1
-- fixed and brought back 5MOVIES
+0.0.2.007
+- More work for Py3 compatibility
+0.0.2.006
+- Small fix to client module for Referer link
+- Added new free hoster WATCHSERIESTV
+- fixed and brought back CARTOONHD
+- small fix for SHOWBOX vid quality
+- Added new free hoster MYPUTLOCKERS
 		</news>
 	</extension>
 </addon>
